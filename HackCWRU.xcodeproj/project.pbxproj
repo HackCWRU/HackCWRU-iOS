@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		040647EA1E18A002003E480F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040647E91E18A002003E480F /* AppDelegate.swift */; };
+		040647EF1E18A002003E480F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040647ED1E18A002003E480F /* Main.storyboard */; };
+		040647F21E18A002003E480F /* HackCWRU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 040647F01E18A002003E480F /* HackCWRU.xcdatamodeld */; };
+		040647F41E18A002003E480F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040647F31E18A002003E480F /* Assets.xcassets */; };
+		040647F71E18A002003E480F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040647F51E18A002003E480F /* LaunchScreen.storyboard */; };
+		040648021E18A002003E480F /* HackCWRUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040648011E18A002003E480F /* HackCWRUTests.swift */; };
+		0406480D1E18A002003E480F /* HackCWRUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406480C1E18A002003E480F /* HackCWRUUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		040647FE1E18A002003E480F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 040647DE1E18A002003E480F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 040647E51E18A002003E480F;
+			remoteInfo = HackCWRU;
+		};
+		040648091E18A002003E480F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 040647DE1E18A002003E480F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 040647E51E18A002003E480F;
+			remoteInfo = HackCWRU;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		040647E61E18A002003E480F /* HackCWRU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackCWRU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		040647E91E18A002003E480F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		040647EE1E18A002003E480F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		040647F11E18A002003E480F /* HackCWRU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackCWRU.xcdatamodel; sourceTree = "<group>"; };
+		040647F31E18A002003E480F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		040647F61E18A002003E480F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		040647F81E18A002003E480F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040647FD1E18A002003E480F /* HackCWRUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackCWRUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		040648011E18A002003E480F /* HackCWRUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackCWRUTests.swift; sourceTree = "<group>"; };
+		040648031E18A002003E480F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040648081E18A002003E480F /* HackCWRUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackCWRUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0406480C1E18A002003E480F /* HackCWRUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackCWRUUITests.swift; sourceTree = "<group>"; };
+		0406480E1E18A002003E480F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		040647E31E18A002003E480F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040647FA1E18A002003E480F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040648051E18A002003E480F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		040647DD1E18A002003E480F = {
+			isa = PBXGroup;
+			children = (
+				040647E81E18A002003E480F /* HackCWRU */,
+				040648001E18A002003E480F /* HackCWRUTests */,
+				0406480B1E18A002003E480F /* HackCWRUUITests */,
+				040647E71E18A002003E480F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		040647E71E18A002003E480F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				040647E61E18A002003E480F /* HackCWRU.app */,
+				040647FD1E18A002003E480F /* HackCWRUTests.xctest */,
+				040648081E18A002003E480F /* HackCWRUUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		040647E81E18A002003E480F /* HackCWRU */ = {
+			isa = PBXGroup;
+			children = (
+				040647ED1E18A002003E480F /* Main.storyboard */,
+				0406481C1E18A018003E480F /* Models */,
+				0406481B1E18A017003E480F /* Views */,
+				0406481A1E18A016003E480F /* Controllers */,
+				0406481D1E18A034003E480F /* Supporting */,
+			);
+			path = HackCWRU;
+			sourceTree = "<group>";
+		};
+		040648001E18A002003E480F /* HackCWRUTests */ = {
+			isa = PBXGroup;
+			children = (
+				040648011E18A002003E480F /* HackCWRUTests.swift */,
+				040648031E18A002003E480F /* Info.plist */,
+			);
+			path = HackCWRUTests;
+			sourceTree = "<group>";
+		};
+		0406480B1E18A002003E480F /* HackCWRUUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0406480C1E18A002003E480F /* HackCWRUUITests.swift */,
+				0406480E1E18A002003E480F /* Info.plist */,
+			);
+			path = HackCWRUUITests;
+			sourceTree = "<group>";
+		};
+		0406481A1E18A016003E480F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0406481B1E18A017003E480F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0406481C1E18A018003E480F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				040647F01E18A002003E480F /* HackCWRU.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0406481D1E18A034003E480F /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				040647E91E18A002003E480F /* AppDelegate.swift */,
+				040647F31E18A002003E480F /* Assets.xcassets */,
+				040647F51E18A002003E480F /* LaunchScreen.storyboard */,
+				040647F81E18A002003E480F /* Info.plist */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		040647E51E18A002003E480F /* HackCWRU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 040648111E18A002003E480F /* Build configuration list for PBXNativeTarget "HackCWRU" */;
+			buildPhases = (
+				040647E21E18A002003E480F /* Sources */,
+				040647E31E18A002003E480F /* Frameworks */,
+				040647E41E18A002003E480F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackCWRU;
+			productName = HackCWRU;
+			productReference = 040647E61E18A002003E480F /* HackCWRU.app */;
+			productType = "com.apple.product-type.application";
+		};
+		040647FC1E18A002003E480F /* HackCWRUTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 040648141E18A002003E480F /* Build configuration list for PBXNativeTarget "HackCWRUTests" */;
+			buildPhases = (
+				040647F91E18A002003E480F /* Sources */,
+				040647FA1E18A002003E480F /* Frameworks */,
+				040647FB1E18A002003E480F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				040647FF1E18A002003E480F /* PBXTargetDependency */,
+			);
+			name = HackCWRUTests;
+			productName = HackCWRUTests;
+			productReference = 040647FD1E18A002003E480F /* HackCWRUTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		040648071E18A002003E480F /* HackCWRUUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 040648171E18A002003E480F /* Build configuration list for PBXNativeTarget "HackCWRUUITests" */;
+			buildPhases = (
+				040648041E18A002003E480F /* Sources */,
+				040648051E18A002003E480F /* Frameworks */,
+				040648061E18A002003E480F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0406480A1E18A002003E480F /* PBXTargetDependency */,
+			);
+			name = HackCWRUUITests;
+			productName = HackCWRUUITests;
+			productReference = 040648081E18A002003E480F /* HackCWRUUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		040647DE1E18A002003E480F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Hacker Society";
+				TargetAttributes = {
+					040647E51E18A002003E480F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					040647FC1E18A002003E480F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 040647E51E18A002003E480F;
+					};
+					040648071E18A002003E480F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 040647E51E18A002003E480F;
+					};
+				};
+			};
+			buildConfigurationList = 040647E11E18A002003E480F /* Build configuration list for PBXProject "HackCWRU" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 040647DD1E18A002003E480F;
+			productRefGroup = 040647E71E18A002003E480F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				040647E51E18A002003E480F /* HackCWRU */,
+				040647FC1E18A002003E480F /* HackCWRUTests */,
+				040648071E18A002003E480F /* HackCWRUUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		040647E41E18A002003E480F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040647F71E18A002003E480F /* LaunchScreen.storyboard in Resources */,
+				040647F41E18A002003E480F /* Assets.xcassets in Resources */,
+				040647EF1E18A002003E480F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040647FB1E18A002003E480F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040648061E18A002003E480F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		040647E21E18A002003E480F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040647F21E18A002003E480F /* HackCWRU.xcdatamodeld in Sources */,
+				040647EA1E18A002003E480F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040647F91E18A002003E480F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040648021E18A002003E480F /* HackCWRUTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		040648041E18A002003E480F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0406480D1E18A002003E480F /* HackCWRUUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		040647FF1E18A002003E480F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 040647E51E18A002003E480F /* HackCWRU */;
+			targetProxy = 040647FE1E18A002003E480F /* PBXContainerItemProxy */;
+		};
+		0406480A1E18A002003E480F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 040647E51E18A002003E480F /* HackCWRU */;
+			targetProxy = 040648091E18A002003E480F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		040647ED1E18A002003E480F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				040647EE1E18A002003E480F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		040647F51E18A002003E480F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				040647F61E18A002003E480F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0406480F1E18A002003E480F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		040648101E18A002003E480F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		040648121E18A002003E480F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HackCWRU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cwru.hack.HackCWRU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		040648131E18A002003E480F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HackCWRU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cwru.hack.HackCWRU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		040648151E18A002003E480F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HackCWRUTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cwru.hack.HackCWRUTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackCWRU.app/HackCWRU";
+			};
+			name = Debug;
+		};
+		040648161E18A002003E480F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HackCWRUTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cwru.hack.HackCWRUTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackCWRU.app/HackCWRU";
+			};
+			name = Release;
+		};
+		040648181E18A002003E480F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = HackCWRUUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cwru.hack.HackCWRUUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HackCWRU;
+			};
+			name = Debug;
+		};
+		040648191E18A002003E480F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = HackCWRUUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.cwru.hack.HackCWRUUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HackCWRU;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		040647E11E18A002003E480F /* Build configuration list for PBXProject "HackCWRU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0406480F1E18A002003E480F /* Debug */,
+				040648101E18A002003E480F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		040648111E18A002003E480F /* Build configuration list for PBXNativeTarget "HackCWRU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				040648121E18A002003E480F /* Debug */,
+				040648131E18A002003E480F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		040648141E18A002003E480F /* Build configuration list for PBXNativeTarget "HackCWRUTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				040648151E18A002003E480F /* Debug */,
+				040648161E18A002003E480F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		040648171E18A002003E480F /* Build configuration list for PBXNativeTarget "HackCWRUUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				040648181E18A002003E480F /* Debug */,
+				040648191E18A002003E480F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		040647F01E18A002003E480F /* HackCWRU.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				040647F11E18A002003E480F /* HackCWRU.xcdatamodel */,
+			);
+			currentVersion = 040647F11E18A002003E480F /* HackCWRU.xcdatamodel */;
+			path = HackCWRU.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 040647DE1E18A002003E480F /* Project object */;
+}
