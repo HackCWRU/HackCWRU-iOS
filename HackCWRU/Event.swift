@@ -7,6 +7,7 @@
 //
 
 import CoreData
+import SwiftyJSON
 
 
 public final class Event: ManagedObject {
@@ -19,8 +20,14 @@ public final class Event: ManagedObject {
     
     // MARK: - "Intializers"
     
-    static func insertObject() -> Event {
+    static func insertObject(json: JSON?) -> Event {
         let event: Event = AppDelegate.moc.insertObject()
+        
+        if let json = json {
+            event.id = json["_id"].string!
+            event.name = json["name"].string!
+        }
+        
         return event
     }
     
