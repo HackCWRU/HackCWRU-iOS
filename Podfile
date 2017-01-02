@@ -7,6 +7,7 @@ target 'HackCWRU' do
 
   # Pods for HackCWRU
   pod 'SwiftyJSON'
+  pod 'Alamofire'
 
   target 'HackCWRUTests' do
     inherit! :search_paths

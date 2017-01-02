@@ -115,7 +115,6 @@
 		040647E81E18A002003E480F /* HackCWRU */ = {
 			isa = PBXGroup;
 			children = (
-				045B84341E18A9F700A7717A /* HackCWRU.entitlements */,
 				040647ED1E18A002003E480F /* Main.storyboard */,
 				0406481C1E18A018003E480F /* Models */,
 				0406481B1E18A017003E480F /* Views */,
@@ -168,6 +167,7 @@
 		0406481D1E18A034003E480F /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				045B84341E18A9F700A7717A /* HackCWRU.entitlements */,
 				040647E91E18A002003E480F /* AppDelegate.swift */,
 				040647F31E18A002003E480F /* Assets.xcassets */,
 				040647F51E18A002003E480F /* LaunchScreen.storyboard */,
