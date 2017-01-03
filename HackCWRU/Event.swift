@@ -31,6 +31,15 @@ public final class Event: ManagedObject {
         return event
     }
     
+    
+    // MARK: - JSON Serialization
+    
+    func json() -> JSON {
+        return [
+            "_id": id,
+            "name": name
+        ]
+    }
 }
 
 
