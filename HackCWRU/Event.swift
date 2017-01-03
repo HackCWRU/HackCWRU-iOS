@@ -20,6 +20,7 @@ public final class Event: ManagedObject {
     @NSManaged public              var startTime: String
     @NSManaged public              var endTime: String
     @NSManaged public              var location: String
+    @NSManaged public              var isFavorite: Bool
     
     var date: String {
         let startDate = date(from: startTime)
@@ -61,6 +62,8 @@ public final class Event: ManagedObject {
             event.endTime = json["endTime"].string!
             event.location = json["location"].string!
         }
+        
+        event.isFavorite = false
         
         return event
     }
