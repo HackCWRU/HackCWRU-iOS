@@ -12,6 +12,8 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    static var moc: NSManagedObjectContext!
+    
     var window: UIWindow?
 
 
