@@ -52,7 +52,7 @@ struct API {
     
     static let manager = Manager()
     
-    static func getAllEvents() {
+    static func getAllEvents(completion: @escaping (_ events: [Event]) -> Void) {
         
         let url = manager.eventsURL()
         let params = ["apikey": APIKeys.hackcwru]
@@ -61,7 +61,14 @@ struct API {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
+                var events = [Event]()
+                
+                for (_, event) in json {
+                    events.insert(Event.insertObject(json: event), at: 0)
+                }
+                
+                completion(events)
+                
             case .failure(let error):
                 print(error)
             }

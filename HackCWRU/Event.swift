@@ -16,6 +16,10 @@ public final class Event: ManagedObject {
     
     @NSManaged public private(set) var id: String
     @NSManaged public              var name: String
+    @NSManaged public              var desc: String
+    @NSManaged public              var startTime: String
+    @NSManaged public              var endTime: String
+    @NSManaged public              var location: String
     
     
     // MARK: - "Intializers"
@@ -26,6 +30,10 @@ public final class Event: ManagedObject {
         if let json = json {
             event.id = json["_id"].string!
             event.name = json["name"].string!
+            event.desc = json["description"].string!
+            event.startTime = json["startTime"].string!
+            event.endTime = json["endTime"].string!
+            event.location = json["location"].string!
         }
         
         return event
@@ -37,7 +45,11 @@ public final class Event: ManagedObject {
     func json() -> JSON {
         return [
             "_id": id,
-            "name": name
+            "name": name,
+            "description": desc,
+            "startTime": startTime,
+            "endTime": endTime,
+            "location": location
         ]
     }
 }
