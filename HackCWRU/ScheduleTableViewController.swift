@@ -37,18 +37,15 @@ class ScheduleTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "event-cell", for: indexPath)
         let event = events[indexPath.row]
-        let timeSlot = event.startTime + " - " + event.startTime
         
         cell.textLabel?.text = event.name
-        cell.detailTextLabel?.text = timeSlot + " | " + event.location
+        cell.detailTextLabel?.text = event.timeSlot + " | " + event.location
 
         return cell
     }
     
-
 }

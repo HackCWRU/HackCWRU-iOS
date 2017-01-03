@@ -21,7 +21,33 @@ public final class Event: ManagedObject {
     @NSManaged public              var endTime: String
     @NSManaged public              var location: String
     
+    var date: String {
+        let startDate = date(from: startTime)
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateStyle = .medium
+        
+        return timeFormatter.string(from: startDate)
+    }
     
+    var timeSlot: String {
+        let startDate = date(from: startTime)
+        let endDate = date(from: endTime)
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.timeStyle = .short
+        
+        return timeFormatter.string(from: startDate) + " - " + timeFormatter.string(from: endDate)
+    }
+    
+    var weekdaySymbol: String {
+        let startDate = date(from: startTime)
+        let dayOfWeekIndex = Calendar.current.component(.weekday, from: startDate)
+        
+        return DateFormatter().weekdaySymbols[dayOfWeekIndex]
+    }
+    
+
     // MARK: - "Intializers"
     
     static func insertObject(json: JSON?) -> Event {
@@ -52,6 +78,16 @@ public final class Event: ManagedObject {
             "location": location
         ]
     }
+    
+    
+    // MARK: - Date Formatting
+    
+    func date(from string: String) -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-mm-dd HH:mm:ss"
+        return formatter.date(from: string)!
+    }
+    
 }
 
 
