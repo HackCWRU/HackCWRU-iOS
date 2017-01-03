@@ -98,3 +98,22 @@ extension Event: ManagedObjectType {
     }
     
 }
+
+extension Array where Element: Event {
+    
+    func groupAndSort() -> [Date: [Event]] {
+        var result = [Date: [Event]]()
+        
+        let sortedByDate = sorted { lhs, rhs in
+            return lhs.startTime < rhs.startTime
+        }
+        
+        sortedByDate.forEach { event in
+            let eventDate = event.date(from: event.startTime)
+            result[eventDate] = (result[eventDate] ?? []) + [event]
+        }
+        
+        return result
+    }
+    
+}
