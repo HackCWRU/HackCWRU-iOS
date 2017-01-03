@@ -16,13 +16,21 @@ class ScheduleTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        addRefreshControl()
         refresh()
     }
     
-    private func refresh() {
+    func addRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl!)
+    }
+    
+    func refresh() {
         API.getAllEvents() { events in
             self.events = events
+            self.refreshControl?.endRefreshing()
             self.tableView.reloadData()
         }
     }
