@@ -60,7 +60,6 @@ class ScheduleTableViewController: UITableViewController {
                     from.endTime = to.endTime
                     from.location = to.location
                     from.updatedAt = to.updatedAt
-                    from.isFavorite = to.isFavorite
                 }, deleteBlock: { event in
                     print("Delete event \(event.id)")
                     AppDelegate.moc.delete(event)
