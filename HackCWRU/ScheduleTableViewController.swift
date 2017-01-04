@@ -110,4 +110,22 @@ class ScheduleTableViewController: UITableViewController {
     func events(forSection section: Int) -> [Event] {
         return eventsGroupAndSorted[sectionDates[section]] ?? []
     }
+    
+    
+    // MARK: - Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "event-detail", sender: self)
+    }
+    
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? EventDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow, segue.identifier == "event-detail" {
+            
+            let event = events(forSection: indexPath.section)[indexPath.row]
+            vc.event = event
+        }
+    }
 }

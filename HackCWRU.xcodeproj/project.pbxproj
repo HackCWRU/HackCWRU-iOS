@@ -20,6 +20,7 @@
 		0495C2E11E1B1D6E003C8CE7 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495C2E01E1B1D6E003C8CE7 /* Event.swift */; };
 		049D30F71E1C44D8007DE948 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D30F61E1C44D8007DE948 /* ScheduleTableViewController.swift */; };
 		049D30F91E1D9FDD007DE948 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D30F81E1D9FDD007DE948 /* Validatable.swift */; };
+		049D30FB1E1DB99F007DE948 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D30FA1E1DB99F007DE948 /* EventDetailViewController.swift */; };
 		166353EAA94125AB4926A303 /* Pods_HackCWRUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F203A84FEEED16D20E0AAC13 /* Pods_HackCWRUTests.framework */; };
 		6321D6EECEC7C42A8117394E /* Pods_HackCWRU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74ACFED504A4D4C3040C4A6 /* Pods_HackCWRU.framework */; };
 		F1B56062E9534EB1E0B0C3C6 /* Pods_HackCWRUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159F7407C07B7D548FD6A930 /* Pods_HackCWRUUITests.framework */; };
@@ -63,6 +64,7 @@
 		0495C2E01E1B1D6E003C8CE7 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		049D30F61E1C44D8007DE948 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		049D30F81E1D9FDD007DE948 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		049D30FA1E1DB99F007DE948 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		159F7407C07B7D548FD6A930 /* Pods_HackCWRUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackCWRUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D4C483F8DC38BC820ACE05 /* Pods-HackCWRUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackCWRUUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackCWRUUITests/Pods-HackCWRUUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69E43D2632AE1B6199E6F63A /* Pods-HackCWRU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackCWRU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackCWRU/Pods-HackCWRU.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				049D30F61E1C44D8007DE948 /* ScheduleTableViewController.swift */,
+				049D30FA1E1DB99F007DE948 /* EventDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				040647F21E18A002003E480F /* HackCWRU.xcdatamodeld in Sources */,
 				0495C2D71E1B0ED0003C8CE7 /* API.swift in Sources */,
 				0495C2DF1E1B1D04003C8CE7 /* ManagedObject.swift in Sources */,
+				049D30FB1E1DB99F007DE948 /* EventDetailViewController.swift in Sources */,
 				0495C2D91E1B11FA003C8CE7 /* APIKeys.swift in Sources */,
 				049D30F71E1C44D8007DE948 /* ScheduleTableViewController.swift in Sources */,
 				049D30F91E1D9FDD007DE948 /* Validatable.swift in Sources */,
