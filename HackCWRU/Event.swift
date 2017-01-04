@@ -10,7 +10,7 @@ import CoreData
 import SwiftyJSON
 
 
-public final class Event: ManagedObject {
+public final class Event: ManagedObject, Validatable {
     
     // MARK: - Properties
     
@@ -20,6 +20,7 @@ public final class Event: ManagedObject {
     @NSManaged public              var startTime: String
     @NSManaged public              var endTime: String
     @NSManaged public              var location: String
+    @NSManaged public              var updatedAt: String
     @NSManaged public              var isFavorite: Bool
     
     var date: String {
@@ -61,6 +62,7 @@ public final class Event: ManagedObject {
             event.startTime = json["startTime"].string!
             event.endTime = json["endTime"].string!
             event.location = json["location"].string!
+            event.updatedAt = json["updated"].string!
         }
         
         event.isFavorite = false
