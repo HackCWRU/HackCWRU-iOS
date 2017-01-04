@@ -48,23 +48,26 @@ class ScheduleTableViewController: UITableViewController {
         self.tableView.reloadData()
         
         // Update core data objects with freshest data.
-        API.getAllEvents() { events in
-            self.events.update(to: events, saveBlock: { event in
-                print("Save event \(event.id)")
-            }, updateBlock: { from, to in
-                print("Update event \(from.id)")
-                from.name = to.name
-                from.desc = to.startTime
-                from.endTime = to.endTime
-                from.location = to.location
-                from.updatedAt = to.updatedAt
-                from.isFavorite = to.isFavorite
-            }, deleteBlock: { event in
-                print("Delete event \(event.id)")
-                AppDelegate.moc.delete(event)
-            }, completion: {
-                try! AppDelegate.moc.save()
-            })
+        API.getAllEvents() { events, success in
+            
+            if let events = events, success {
+                self.events.update(to: events, saveBlock: { event in
+                    print("Save event \(event.id)")
+                }, updateBlock: { from, to in
+                    print("Update event \(from.id)")
+                    from.name = to.name
+                    from.desc = to.startTime
+                    from.endTime = to.endTime
+                    from.location = to.location
+                    from.updatedAt = to.updatedAt
+                    from.isFavorite = to.isFavorite
+                }, deleteBlock: { event in
+                    print("Delete event \(event.id)")
+                    AppDelegate.moc.delete(event)
+                }, completion: {
+                    try! AppDelegate.moc.save()
+                })
+            }
             
             // Refresh the local variable.
             self.events = self.fetchEvents()
