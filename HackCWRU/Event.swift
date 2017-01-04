@@ -112,7 +112,11 @@ extension Array where Element: Event {
         }
         
         sortedByDate.forEach { event in
-            let eventDate = event.date(from: event.startTime)
+            // Eliminate the timestamp from each date.
+            var eventDate = event.date(from: event.startTime)
+            let comps = Calendar.current.dateComponents([.day, .month, .year], from: eventDate)
+            eventDate = Calendar.current.date(from: comps)!
+            
             result[eventDate] = (result[eventDate] ?? []) + [event]
         }
         
