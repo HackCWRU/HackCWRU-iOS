@@ -48,12 +48,15 @@ struct API {
             }
         }
         
+        func notificationsURL(deviceToken: String) -> String {
+            return [baseURL, "notifications", "register", deviceToken].joined(separator: "/")
+        }
+        
     }
     
     static let manager = Manager()
     
     static func getAllEvents(completion: @escaping ([Event]?, Bool) -> Void) {
-        
         let url = manager.eventsURL()
         let params = ["apikey": APIKeys.hackcwru]
         
@@ -74,7 +77,25 @@ struct API {
                 completion(nil, false)
             }
         }
+    }
+    
+    static func registerDeviceForPushNotifications(deviceToken: String) {
+        let url = manager.notificationsURL(deviceToken: deviceToken)
+        let params = [
+            "apikey": APIKeys.hackcwru,
+            "deviceToken": deviceToken,
+            "os": "ios"
+        ]
         
+        Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print(json)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
 }
