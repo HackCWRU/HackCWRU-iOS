@@ -25,6 +25,7 @@ class EventDetailViewController: UITableViewController {
     
     @IBAction func favorited(_ sender: UIBarButtonItem) {
         event.isFavorite = !event.isFavorite
+        highlightFavoriteButton()
         delegate.favoriteStatusDidChange()
         try! event.managedObjectContext?.save()
     }
@@ -33,10 +34,16 @@ class EventDetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(event.isFavorite)
+        highlightFavoriteButton()
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
+    }
+    
+    func highlightFavoriteButton() {
+        let imageName = event.isFavorite ? "navbar-favorite-filled" : "navbar-favorite"
+        guard let image = UIImage(named: imageName + ".png") else { return }
+        favoriteBarButton.image = image
     }
 
 

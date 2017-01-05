@@ -24,6 +24,8 @@
 		04C5F82D1E1EB467007F704D /* EventNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F82C1E1EB467007F704D /* EventNameCell.swift */; };
 		04C5F82F1E1EB89E007F704D /* EventDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F82E1E1EB89E007F704D /* EventDescriptionCell.swift */; };
 		04C5F8311E1EBBCE007F704D /* EventTimeLocationCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F8301E1EBBCE007F704D /* EventTimeLocationCellCell.swift */; };
+		04C5F8331E1EC7FA007F704D /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C5F8321E1EC7FA007F704D /* TabBar.xcassets */; };
+		04C5F8351E1ECA27007F704D /* NavBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C5F8341E1ECA27007F704D /* NavBar.xcassets */; };
 		166353EAA94125AB4926A303 /* Pods_HackCWRUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F203A84FEEED16D20E0AAC13 /* Pods_HackCWRUTests.framework */; };
 		6321D6EECEC7C42A8117394E /* Pods_HackCWRU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74ACFED504A4D4C3040C4A6 /* Pods_HackCWRU.framework */; };
 		F1B56062E9534EB1E0B0C3C6 /* Pods_HackCWRUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159F7407C07B7D548FD6A930 /* Pods_HackCWRUUITests.framework */; };
@@ -71,6 +73,8 @@
 		04C5F82C1E1EB467007F704D /* EventNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNameCell.swift; sourceTree = "<group>"; };
 		04C5F82E1E1EB89E007F704D /* EventDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDescriptionCell.swift; sourceTree = "<group>"; };
 		04C5F8301E1EBBCE007F704D /* EventTimeLocationCellCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTimeLocationCellCell.swift; sourceTree = "<group>"; };
+		04C5F8321E1EC7FA007F704D /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBar.xcassets; sourceTree = "<group>"; };
+		04C5F8341E1ECA27007F704D /* NavBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NavBar.xcassets; sourceTree = "<group>"; };
 		159F7407C07B7D548FD6A930 /* Pods_HackCWRUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackCWRUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D4C483F8DC38BC820ACE05 /* Pods-HackCWRUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackCWRUUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackCWRUUITests/Pods-HackCWRUUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69E43D2632AE1B6199E6F63A /* Pods-HackCWRU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackCWRU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackCWRU/Pods-HackCWRU.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				045B84341E18A9F700A7717A /* HackCWRU.entitlements */,
 				040647E91E18A002003E480F /* AppDelegate.swift */,
 				040647F31E18A002003E480F /* Assets.xcassets */,
+				04C5F8321E1EC7FA007F704D /* TabBar.xcassets */,
+				04C5F8341E1ECA27007F704D /* NavBar.xcassets */,
 				040647F51E18A002003E480F /* LaunchScreen.storyboard */,
 				040647F81E18A002003E480F /* Info.plist */,
 			);
@@ -352,7 +358,9 @@
 			files = (
 				040647F71E18A002003E480F /* LaunchScreen.storyboard in Resources */,
 				040647F41E18A002003E480F /* Assets.xcassets in Resources */,
+				04C5F8351E1ECA27007F704D /* NavBar.xcassets in Resources */,
 				040647EF1E18A002003E480F /* Main.storyboard in Resources */,
+				04C5F8331E1EC7FA007F704D /* TabBar.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,7 +31,7 @@
         <scene sceneID="V39-v2-31M">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lxl-Cb-Z93" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" id="xYg-h2-z35"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="tabbar-schedule" selectedImage="tabbar-schedule-filled" id="xYg-h2-z35"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f6e-t9-Y48">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -215,7 +215,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="DdP-qu-WxY">
-                        <barButtonItem key="rightBarButtonItem" title="Favorite" id="Anc-S5-gOJ">
+                        <barButtonItem key="rightBarButtonItem" image="navbar-favorite" id="Anc-S5-gOJ">
                             <connections>
                                 <action selector="favorited:" destination="eDR-rL-L6B" id="tdD-Yj-9Ak"/>
                             </connections>
@@ -231,4 +231,9 @@
             <point key="canvasLocation" x="1524" y="-287.40629685157421"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="navbar-favorite" width="22" height="22"/>
+        <image name="tabbar-schedule" width="32" height="32"/>
+        <image name="tabbar-schedule-filled" width="32" height="32"/>
+    </resources>
 </document>
