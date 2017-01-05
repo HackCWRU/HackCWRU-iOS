@@ -8,15 +8,21 @@
 
 import UIKit
 
+protocol EventDetailViewControllerDelegate {
+    func favoriteStatusDidChange()
+}
+
 class EventDetailViewController: UITableViewController {
     
     var event: Event!
-
+    var delegate: EventDetailViewControllerDelegate!
+    
     
     @IBOutlet weak var favoriteBarButton: UIBarButtonItem!
     
     @IBAction func favorited(_ sender: UIBarButtonItem) {
         event.isFavorite = !event.isFavorite
+        delegate.favoriteStatusDidChange()
         try! event.managedObjectContext?.save()
     }
     

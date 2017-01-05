@@ -94,9 +94,13 @@
                                 <segment title="All"/>
                                 <segment title="Favorites"/>
                             </segments>
+                            <connections>
+                                <action selector="didChangeFavoritesFilter:" destination="Q07-ZK-CS9" eventType="valueChanged" id="V8k-FL-Aol"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
+                        <outlet property="favoritesControl" destination="PJb-na-GUf" id="sw4-qD-uaX"/>
                         <segue destination="eDR-rL-L6B" kind="show" identifier="event-detail" id="WY1-HA-Fxl"/>
                     </connections>
                 </tableViewController>

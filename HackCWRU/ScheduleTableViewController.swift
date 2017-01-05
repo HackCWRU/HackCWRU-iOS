@@ -22,12 +22,22 @@ class ScheduleTableViewController: UITableViewController {
     
     private var events = [Event]() {
         didSet {
-            eventsGroupAndSorted = events.groupAndSort()
+            eventsGroupAndSorted = events.groupAndSort(favoritesOnly)
         }
     }
     
     private var sectionDates: [Date] {
         return eventsGroupAndSorted.keys.sorted(by: <)
+    }
+    
+    private var favoritesOnly: Bool {
+        return favoritesControl.selectedSegmentIndex == 1
+    }
+    
+    @IBOutlet weak var favoritesControl: UISegmentedControl!
+    
+    @IBAction func didChangeFavoritesFilter(_ sender: UISegmentedControl) {
+        reload()
     }
     
     override func viewDidLoad() {
@@ -71,8 +81,13 @@ class ScheduleTableViewController: UITableViewController {
             // Refresh the local variable.
             self.events = self.fetchEvents()
             self.refreshControl?.endRefreshing()
-            self.tableView.reloadData()
+            self.reload()
         }
+    }
+    
+    func reload() {
+        eventsGroupAndSorted = events.groupAndSort(favoritesOnly)
+        tableView.reloadData()
     }
     
     func fetchEvents() -> [Event] {
@@ -125,6 +140,16 @@ class ScheduleTableViewController: UITableViewController {
             
             let event = events(forSection: indexPath.section)[indexPath.row]
             vc.event = event
+            vc.delegate = self
         }
     }
+}
+
+
+extension ScheduleTableViewController: EventDetailViewControllerDelegate {
+    
+    func favoriteStatusDidChange() {
+        reload()
+    }
+    
 }

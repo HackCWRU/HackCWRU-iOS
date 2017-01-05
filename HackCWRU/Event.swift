@@ -106,10 +106,19 @@ extension Event: ManagedObjectType {
 
 extension Array where Element: Event {
     
-    func groupAndSort() -> [Date: [Event]] {
+    func groupAndSort(_ favoritesOnly: Bool = false) -> [Date: [Event]] {
         var result = [Date: [Event]]()
+        var filtered = [Event]()
         
-        let sortedByDate = sorted { lhs, rhs in
+        if favoritesOnly {
+            filtered = filter { event in
+                return event.isFavorite
+            }
+        } else {
+            filtered = self
+        }
+        
+        let sortedByDate = filtered.sorted { lhs, rhs in
             return lhs.startTime < rhs.startTime
         }
         
