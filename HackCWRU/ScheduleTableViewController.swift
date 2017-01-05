@@ -45,6 +45,8 @@ class ScheduleTableViewController: UITableViewController {
         
         addRefreshControl()
         refresh()
+        
+        tableView.tableFooterView = UIView()
     }
     
     func addRefreshControl() {
