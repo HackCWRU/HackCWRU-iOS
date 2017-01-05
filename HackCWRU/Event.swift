@@ -46,7 +46,7 @@ public final class Event: ManagedObject, Validatable {
         let startDate = date(from: startTime)
         let dayOfWeekIndex = Calendar.current.component(.weekday, from: startDate)
         
-        return DateFormatter().weekdaySymbols[dayOfWeekIndex]
+        return DateFormatter().weekdaySymbols[dayOfWeekIndex - 1]
     }
     
 
