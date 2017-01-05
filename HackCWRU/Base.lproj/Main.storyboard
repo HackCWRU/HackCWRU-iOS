@@ -168,29 +168,43 @@
                                     <outlet property="descriptionLabel" destination="dfI-tC-WaF" id="Dgo-4j-aEF"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="event-loc-cell" rowHeight="20" id="QCJ-Vl-mbJ" customClass="EventLocationCell" customModule="HackCWRU" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="132" width="375" height="20"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="event-loc-cell" rowHeight="40" id="QCJ-Vl-mbJ" customClass="EventTimeLocationCell" customModule="HackCWRU" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="132" width="375" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QCJ-Vl-mbJ" id="gT1-EM-zkE">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSO-A6-kHd">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSO-A6-kHd">
+                                            <rect key="frame" x="16" y="19" width="343" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CA7-wx-q8G">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="19" id="FXw-tu-DXA"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="XSO-A6-kHd" firstAttribute="leading" secondItem="gT1-EM-zkE" secondAttribute="leading" constant="16" id="1bP-N4-MGS"/>
-                                        <constraint firstItem="XSO-A6-kHd" firstAttribute="top" secondItem="gT1-EM-zkE" secondAttribute="top" id="H8m-lp-DwR"/>
-                                        <constraint firstAttribute="bottom" secondItem="XSO-A6-kHd" secondAttribute="bottom" id="IaN-nW-30f"/>
-                                        <constraint firstAttribute="trailing" secondItem="XSO-A6-kHd" secondAttribute="trailing" constant="16" id="S7b-Pi-spb"/>
+                                        <constraint firstItem="XSO-A6-kHd" firstAttribute="leading" secondItem="gT1-EM-zkE" secondAttribute="leading" constant="16" id="1Yt-XK-il3"/>
+                                        <constraint firstItem="XSO-A6-kHd" firstAttribute="top" secondItem="CA7-wx-q8G" secondAttribute="bottom" id="A3M-lf-DDO"/>
+                                        <constraint firstItem="CA7-wx-q8G" firstAttribute="top" secondItem="gT1-EM-zkE" secondAttribute="top" id="INN-6f-xn7"/>
+                                        <constraint firstAttribute="trailing" secondItem="XSO-A6-kHd" secondAttribute="trailing" constant="16" id="LLt-ke-6do"/>
+                                        <constraint firstItem="XSO-A6-kHd" firstAttribute="top" secondItem="CA7-wx-q8G" secondAttribute="bottom" id="jJG-l2-xGK"/>
+                                        <constraint firstAttribute="trailing" secondItem="CA7-wx-q8G" secondAttribute="trailing" constant="16" id="l5J-eg-EI3"/>
+                                        <constraint firstAttribute="bottom" secondItem="XSO-A6-kHd" secondAttribute="bottom" id="qIO-Rr-ydX"/>
+                                        <constraint firstItem="CA7-wx-q8G" firstAttribute="leading" secondItem="gT1-EM-zkE" secondAttribute="leading" constant="16" id="zKs-q5-dcQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="locationLabel" destination="XSO-A6-kHd" id="aXR-RU-YkV"/>
+                                    <outlet property="locationLabel" destination="XSO-A6-kHd" id="1oN-gX-xzL"/>
+                                    <outlet property="timeLabel" destination="CA7-wx-q8G" id="p7C-ej-5LS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -8,8 +8,9 @@
 
 import UIKit
 
-class EventLocationCell: UITableViewCell {
+class EventTimeLocationCell: UITableViewCell {
 
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
 
 }
