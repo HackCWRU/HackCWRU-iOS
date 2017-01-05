@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -58,18 +59,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDg-rh-gE4" id="0io-C5-pe1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="90S-TM-M7s">
-                                            <rect key="frame" x="15" y="4" width="93" height="21"/>
+                                            <rect key="frame" x="15" y="5" width="92.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Time | Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NpS-pi-7HS">
-                                            <rect key="frame" x="15" y="25" width="87" height="15"/>
+                                            <rect key="frame" x="15" y="25.5" width="87" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -108,22 +109,89 @@
             </objects>
             <point key="canvasLocation" x="788" y="-287"/>
         </scene>
-        <!--Title-->
+        <!--Event Detail View Controller-->
         <scene sceneID="4tf-AK-WFM">
             <objects>
                 <tableViewController id="eDR-rL-L6B" customClass="EventDetailViewController" customModule="HackCWRU" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Aen-u1-lj2">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Aen-u1-lj2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nag-E4-ixH">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="event-name-cell" rowHeight="60" id="nag-E4-ixH" customClass="EventNameCell" customModule="HackCWRU" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nag-E4-ixH" id="koq-R7-3rb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKW-jf-mns">
+                                            <rect key="frame" x="16" y="8" width="343" height="43.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yKW-jf-mns" secondAttribute="trailing" constant="8" id="EhS-OY-BJt"/>
+                                        <constraint firstItem="yKW-jf-mns" firstAttribute="leading" secondItem="koq-R7-3rb" secondAttribute="leadingMargin" constant="8" id="PUv-5r-KHQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yKW-jf-mns" secondAttribute="bottom" id="VBZ-ev-BTS"/>
+                                        <constraint firstItem="yKW-jf-mns" firstAttribute="top" secondItem="koq-R7-3rb" secondAttribute="topMargin" id="fq0-WE-3dr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="yKW-jf-mns" id="F7R-Ag-XMs"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="event-desc-cell" id="73E-Y7-zNS" customClass="EventDescriptionCell" customModule="HackCWRU" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="73E-Y7-zNS" id="mQ5-Mw-DvW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfI-tC-WaF">
+                                            <rect key="frame" x="16" y="8" width="343" height="27.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dfI-tC-WaF" secondAttribute="trailing" constant="8" id="1kN-mI-58r"/>
+                                        <constraint firstItem="dfI-tC-WaF" firstAttribute="leading" secondItem="mQ5-Mw-DvW" secondAttribute="leadingMargin" constant="8" id="U8d-Pt-IxY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dfI-tC-WaF" secondAttribute="bottom" id="sfM-E2-2kH"/>
+                                        <constraint firstItem="dfI-tC-WaF" firstAttribute="top" secondItem="mQ5-Mw-DvW" secondAttribute="topMargin" id="wfF-H9-IXz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="dfI-tC-WaF" id="Dgo-4j-aEF"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="event-loc-cell" rowHeight="20" id="QCJ-Vl-mbJ" customClass="EventLocationCell" customModule="HackCWRU" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="132" width="375" height="20"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QCJ-Vl-mbJ" id="gT1-EM-zkE">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSO-A6-kHd">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XSO-A6-kHd" firstAttribute="leading" secondItem="gT1-EM-zkE" secondAttribute="leading" constant="16" id="1bP-N4-MGS"/>
+                                        <constraint firstItem="XSO-A6-kHd" firstAttribute="top" secondItem="gT1-EM-zkE" secondAttribute="top" id="H8m-lp-DwR"/>
+                                        <constraint firstAttribute="bottom" secondItem="XSO-A6-kHd" secondAttribute="bottom" id="IaN-nW-30f"/>
+                                        <constraint firstAttribute="trailing" secondItem="XSO-A6-kHd" secondAttribute="trailing" constant="16" id="S7b-Pi-spb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationLabel" destination="XSO-A6-kHd" id="aXR-RU-YkV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -132,7 +200,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="DdP-qu-WxY">
+                    <navigationItem key="navigationItem" id="DdP-qu-WxY">
                         <barButtonItem key="rightBarButtonItem" title="Favorite" id="Anc-S5-gOJ">
                             <connections>
                                 <action selector="favorited:" destination="eDR-rL-L6B" id="tdD-Yj-9Ak"/>
@@ -146,7 +214,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHn-aR-tWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1524" y="-287"/>
+            <point key="canvasLocation" x="1524" y="-287.40629685157421"/>
         </scene>
     </scenes>
 </document>
