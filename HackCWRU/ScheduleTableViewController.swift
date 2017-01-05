@@ -66,7 +66,7 @@ class ScheduleTableViewController: UITableViewController {
                 }, updateBlock: { from, to in
                     print("Update event \(from.id)")
                     from.name = to.name
-                    from.desc = to.startTime
+                    from.desc = to.desc
                     from.endTime = to.endTime
                     from.location = to.location
                     from.updatedAt = to.updatedAt
