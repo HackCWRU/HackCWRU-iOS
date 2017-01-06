@@ -30,6 +30,8 @@ class AnnouncementsTableViewController: UITableViewController {
         refresh()
         
         tableView.tableFooterView = UIView()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
     }
     
     func addRefreshControl() {
@@ -93,10 +95,12 @@ class AnnouncementsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-
-        cell.textLabel?.text = sortedAnnouncements[indexPath.row].title
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "announcements-cell", for: indexPath) as! AnnouncementCell
+        let announcement = sortedAnnouncements[indexPath.row]
+        
+        cell.titleLabel?.text = announcement.title
+        cell.messageLabel?.text = announcement.message
+        
         return cell
     }
     

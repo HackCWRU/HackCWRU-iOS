@@ -30,6 +30,7 @@
 		04C5F83A1E201531007F704D /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F8391E201531007F704D /* Announcement.swift */; };
 		04C5F83C1E201710007F704D /* AnnouncementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F83B1E201710007F704D /* AnnouncementsTableViewController.swift */; };
 		04C5F83E1E203E7B007F704D /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F83D1E203E7B007F704D /* EventCell.swift */; };
+		04C5F8401E204474007F704D /* AnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F83F1E204474007F704D /* AnnouncementCell.swift */; };
 		166353EAA94125AB4926A303 /* Pods_HackCWRUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F203A84FEEED16D20E0AAC13 /* Pods_HackCWRUTests.framework */; };
 		6321D6EECEC7C42A8117394E /* Pods_HackCWRU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74ACFED504A4D4C3040C4A6 /* Pods_HackCWRU.framework */; };
 		F1B56062E9534EB1E0B0C3C6 /* Pods_HackCWRUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159F7407C07B7D548FD6A930 /* Pods_HackCWRUUITests.framework */; };
@@ -83,6 +84,7 @@
 		04C5F8391E201531007F704D /* Announcement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		04C5F83B1E201710007F704D /* AnnouncementsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsTableViewController.swift; sourceTree = "<group>"; };
 		04C5F83D1E203E7B007F704D /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		04C5F83F1E204474007F704D /* AnnouncementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementCell.swift; sourceTree = "<group>"; };
 		159F7407C07B7D548FD6A930 /* Pods_HackCWRUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackCWRUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D4C483F8DC38BC820ACE05 /* Pods-HackCWRUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackCWRUUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackCWRUUITests/Pods-HackCWRUUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69E43D2632AE1B6199E6F63A /* Pods-HackCWRU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackCWRU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackCWRU/Pods-HackCWRU.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		0406481B1E18A017003E480F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04C5F83F1E204474007F704D /* AnnouncementCell.swift */,
 				04C5F82E1E1EB89E007F704D /* EventDescriptionCell.swift */,
 				04C5F8301E1EBBCE007F704D /* EventTimeLocationCellCell.swift */,
 				04C5F82C1E1EB467007F704D /* EventNameCell.swift */,
@@ -531,6 +534,7 @@
 				04C5F83C1E201710007F704D /* AnnouncementsTableViewController.swift in Sources */,
 				04C5F8311E1EBBCE007F704D /* EventTimeLocationCellCell.swift in Sources */,
 				040647F21E18A002003E480F /* HackCWRU.xcdatamodeld in Sources */,
+				04C5F8401E204474007F704D /* AnnouncementCell.swift in Sources */,
 				04C5F82F1E1EB89E007F704D /* EventDescriptionCell.swift in Sources */,
 				04C5F82D1E1EB467007F704D /* EventNameCell.swift in Sources */,
 				04C5F83A1E201531007F704D /* Announcement.swift in Sources */,

@@ -64,7 +64,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHP-At-nZn">
-                                            <rect key="frame" x="16" y="8" width="343" height="19"/>
+                                            <rect key="frame" x="16" y="8" width="343" height="23"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Bbv-5X-XVT" firstAttribute="top" secondItem="iHP-At-nZn" secondAttribute="bottom" constant="8" id="Etf-q0-bmu"/>
+                                        <constraint firstItem="Bbv-5X-XVT" firstAttribute="top" secondItem="iHP-At-nZn" secondAttribute="bottom" constant="4" id="Etf-q0-bmu"/>
                                         <constraint firstItem="Bbv-5X-XVT" firstAttribute="trailing" secondItem="iHP-At-nZn" secondAttribute="trailing" id="Klk-yX-Z4z"/>
                                         <constraint firstItem="iHP-At-nZn" firstAttribute="top" secondItem="0io-C5-pe1" secondAttribute="topMargin" id="aPP-zO-cb8"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="iHP-At-nZn" secondAttribute="trailing" constant="8" id="blC-bk-BCm"/>
@@ -128,18 +128,48 @@
         <scene sceneID="fMx-v1-5ck">
             <objects>
                 <tableViewController id="nMJ-ak-8Kf" customClass="AnnouncementsTableViewController" customModule="HackCWRU" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="H9q-wu-g7y">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="H9q-wu-g7y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Obv-iM-I5d">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="announcements-cell" rowHeight="70" id="Obv-iM-I5d" customClass="AnnouncementCell" customModule="HackCWRU" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Obv-iM-I5d" id="v4J-iO-F9V">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8O-Ra-B17">
+                                            <rect key="frame" x="16" y="8" width="343" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="m34-Lv-XR4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsd-fj-AkZ">
+                                            <rect key="frame" x="16" y="32" width="343" height="29.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="K8O-Ra-B17" firstAttribute="top" secondItem="v4J-iO-F9V" secondAttribute="topMargin" id="4hm-lN-3ts"/>
+                                        <constraint firstItem="Fsd-fj-AkZ" firstAttribute="trailing" secondItem="K8O-Ra-B17" secondAttribute="trailing" id="JYn-0E-EGp"/>
+                                        <constraint firstItem="Fsd-fj-AkZ" firstAttribute="leading" secondItem="K8O-Ra-B17" secondAttribute="leading" id="f3Y-4F-4hK"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Fsd-fj-AkZ" secondAttribute="bottom" id="lIk-SP-o0R"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="K8O-Ra-B17" secondAttribute="trailing" constant="8" id="mZV-kZ-5or"/>
+                                        <constraint firstItem="K8O-Ra-B17" firstAttribute="leading" secondItem="v4J-iO-F9V" secondAttribute="leadingMargin" constant="8" id="o97-zW-hjg"/>
+                                        <constraint firstItem="Fsd-fj-AkZ" firstAttribute="top" secondItem="K8O-Ra-B17" secondAttribute="bottom" constant="4" id="xvd-Qg-qW8"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="messageLabel" destination="Fsd-fj-AkZ" id="4KF-hb-oek"/>
+                                    <outlet property="titleLabel" destination="K8O-Ra-B17" id="QHB-CD-8CZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -151,7 +181,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bQ-91-qfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="395"/>
+            <point key="canvasLocation" x="788" y="394.45277361319341"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="4tf-AK-WFM">
