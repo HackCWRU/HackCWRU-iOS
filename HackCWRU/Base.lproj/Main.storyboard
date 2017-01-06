@@ -21,11 +21,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="Lxl-Cb-Z93" kind="relationship" relationship="viewControllers" id="Tu8-9u-lLS"/>
+                        <segue destination="eBr-u4-14V" kind="relationship" relationship="viewControllers" id="qa3-ZI-AP1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnD-ru-EHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1046" y="-286"/>
+            <point key="canvasLocation" x="-1060" y="8"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="V39-v2-31M">
@@ -108,6 +109,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYx-tg-VcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="-287"/>
+        </scene>
+        <!--Announcements-->
+        <scene sceneID="fMx-v1-5ck">
+            <objects>
+                <tableViewController id="nMJ-ak-8Kf" customClass="AnnouncementsTableViewController" customModule="HackCWRU" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="H9q-wu-g7y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Obv-iM-I5d">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Obv-iM-I5d" id="v4J-iO-F9V">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nMJ-ak-8Kf" id="meH-Ht-JgO"/>
+                            <outlet property="delegate" destination="nMJ-ak-8Kf" id="OTg-m7-byw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Announcements" id="i5L-dc-8wa"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bQ-91-qfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="395"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="4tf-AK-WFM">
@@ -230,9 +260,30 @@
             </objects>
             <point key="canvasLocation" x="1524" y="-287.40629685157421"/>
         </scene>
+        <!--Announcements-->
+        <scene sceneID="Bka-91-obb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eBr-u4-14V" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Announcements" image="tabbar-announcements" selectedImage="tabbar-announcements-filled" id="HzY-Kc-2JL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IQT-Yv-Ssi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nMJ-ak-8Kf" kind="relationship" relationship="rootViewController" id="0VT-Jd-Gms"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzG-X0-VqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114" y="396"/>
+        </scene>
     </scenes>
     <resources>
         <image name="navbar-favorite" width="22" height="22"/>
+        <image name="tabbar-announcements" width="32" height="32"/>
+        <image name="tabbar-announcements-filled" width="32" height="32"/>
         <image name="tabbar-schedule" width="32" height="32"/>
         <image name="tabbar-schedule-filled" width="32" height="32"/>
     </resources>
