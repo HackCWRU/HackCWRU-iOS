@@ -141,7 +141,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8O-Ra-B17">
-                                            <rect key="frame" x="16" y="8" width="343" height="20"/>
+                                            <rect key="frame" x="16" y="8" width="249" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="m34-Lv-XR4"/>
                                             </constraints>
@@ -155,19 +155,32 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun 12:00 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egu-gv-lC1">
+                                            <rect key="frame" x="273" y="8" width="86" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="86" id="0ZU-NL-lxv"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.32549019610000002" green="0.34901960780000002" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="K8O-Ra-B17" firstAttribute="top" secondItem="v4J-iO-F9V" secondAttribute="topMargin" id="4hm-lN-3ts"/>
-                                        <constraint firstItem="Fsd-fj-AkZ" firstAttribute="trailing" secondItem="K8O-Ra-B17" secondAttribute="trailing" id="JYn-0E-EGp"/>
+                                        <constraint firstItem="Egu-gv-lC1" firstAttribute="bottom" secondItem="K8O-Ra-B17" secondAttribute="bottom" id="Gqi-nb-LGx"/>
                                         <constraint firstItem="Fsd-fj-AkZ" firstAttribute="leading" secondItem="K8O-Ra-B17" secondAttribute="leading" id="f3Y-4F-4hK"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Egu-gv-lC1" secondAttribute="trailing" constant="8" id="fFh-4z-tFG"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Fsd-fj-AkZ" secondAttribute="bottom" id="lIk-SP-o0R"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="K8O-Ra-B17" secondAttribute="trailing" constant="8" id="mZV-kZ-5or"/>
+                                        <constraint firstItem="Egu-gv-lC1" firstAttribute="top" secondItem="K8O-Ra-B17" secondAttribute="top" id="m33-fd-hWJ"/>
                                         <constraint firstItem="K8O-Ra-B17" firstAttribute="leading" secondItem="v4J-iO-F9V" secondAttribute="leadingMargin" constant="8" id="o97-zW-hjg"/>
+                                        <constraint firstItem="Egu-gv-lC1" firstAttribute="leading" secondItem="K8O-Ra-B17" secondAttribute="trailing" constant="8" id="vwl-PI-Q0H"/>
+                                        <constraint firstItem="Egu-gv-lC1" firstAttribute="trailing" secondItem="Fsd-fj-AkZ" secondAttribute="trailing" id="xqU-cL-d2H"/>
                                         <constraint firstItem="Fsd-fj-AkZ" firstAttribute="top" secondItem="K8O-Ra-B17" secondAttribute="bottom" constant="4" id="xvd-Qg-qW8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="messageLabel" destination="Fsd-fj-AkZ" id="4KF-hb-oek"/>
+                                    <outlet property="timeLabel" destination="Egu-gv-lC1" id="bGy-Mj-HeZ"/>
                                     <outlet property="titleLabel" destination="K8O-Ra-B17" id="QHB-CD-8CZ"/>
                                 </connections>
                             </tableViewCell>

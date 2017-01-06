@@ -100,6 +100,7 @@ class AnnouncementsTableViewController: UITableViewController {
         
         cell.titleLabel?.text = announcement.title
         cell.messageLabel?.text = announcement.message
+        cell.timeLabel?.text = announcement.sentTimestamp
         
         return cell
     }
