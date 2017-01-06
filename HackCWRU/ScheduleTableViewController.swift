@@ -47,6 +47,8 @@ class ScheduleTableViewController: UITableViewController {
         refresh()
         
         tableView.tableFooterView = UIView()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 60
     }
     
     func addRefreshControl() {
@@ -110,11 +112,11 @@ class ScheduleTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "event-cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "event-cell", for: indexPath) as! EventCell
         let event = events(forSection: indexPath.section)[indexPath.row]
         
-        cell.textLabel?.text = event.name
-        cell.detailTextLabel?.text = event.timeSlot + " | " + event.location
+        cell.eventName?.text = event.name
+        cell.eventTimeLocation?.text = event.timeSlot + " | " + event.location
 
         return cell
     }
@@ -136,6 +138,7 @@ class ScheduleTableViewController: UITableViewController {
     
     
     // MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? EventDetailViewController,
             let indexPath = tableView.indexPathForSelectedRow, segue.identifier == "event-detail" {
