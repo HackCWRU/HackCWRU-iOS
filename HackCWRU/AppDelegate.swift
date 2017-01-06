@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        UITabBar.appearance().tintColor = Colors.edgewaterBlue
+        
         return true
     }
     
