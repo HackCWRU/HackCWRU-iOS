@@ -20,7 +20,7 @@ struct API {
         func host() -> String {
             switch self {
             case .development:
-                return "http://localhost:3000"
+                return "http://192.168.1.150:3000"
             case .production(let host):
                 return host
             }
@@ -46,6 +46,10 @@ struct API {
             } else {
                 return [baseURL, "events"].joined(separator: "/")
             }
+        }
+        
+        func announcementsURL() -> String {
+            return [baseURL, "announcements"].joined(separator: "/")
         }
         
         func notificationsURL(deviceToken: String) -> String {
@@ -77,6 +81,30 @@ struct API {
                 completion(nil, false)
             }
         }
+    }
+    
+    static func getAllAnnouncements(completion: @escaping ([Announcement]?, Bool) -> Void) {
+        let url = manager.announcementsURL()
+        let params = ["apikey": APIKeys.hackcwru]
+        
+        Alamofire.request(url, method: .get, parameters: params).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                var announcements = [Announcement]()
+                
+                for (_, announcement) in json {
+                    announcements.insert(Announcement.insertObject(json: announcement), at: 0)
+                }
+                
+                completion(announcements, true)
+                
+            case .failure(let error):
+                print(error)
+                completion(nil, false)
+            }
+        }
+        
     }
     
     static func registerDeviceForPushNotifications(deviceToken: String) {
