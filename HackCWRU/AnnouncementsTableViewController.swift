@@ -26,18 +26,12 @@ class AnnouncementsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addRefreshControl()
+        addRefreshControl(selector: #selector(refresh))
+        hideExcessDividers()
         refresh()
         
-        tableView.tableFooterView = UIView()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
-    }
-    
-    func addRefreshControl() {
-        refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        tableView.addSubview(refreshControl!)
     }
     
     func refresh() {
