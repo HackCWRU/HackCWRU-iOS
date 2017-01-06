@@ -27,6 +27,7 @@
 		04C5F8331E1EC7FA007F704D /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C5F8321E1EC7FA007F704D /* TabBar.xcassets */; };
 		04C5F8351E1ECA27007F704D /* NavBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C5F8341E1ECA27007F704D /* NavBar.xcassets */; };
 		04C5F8381E1FFDE4007F704D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F8371E1FFDE4007F704D /* Colors.swift */; };
+		04C5F83A1E201531007F704D /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F8391E201531007F704D /* Announcement.swift */; };
 		166353EAA94125AB4926A303 /* Pods_HackCWRUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F203A84FEEED16D20E0AAC13 /* Pods_HackCWRUTests.framework */; };
 		6321D6EECEC7C42A8117394E /* Pods_HackCWRU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74ACFED504A4D4C3040C4A6 /* Pods_HackCWRU.framework */; };
 		F1B56062E9534EB1E0B0C3C6 /* Pods_HackCWRUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159F7407C07B7D548FD6A930 /* Pods_HackCWRUUITests.framework */; };
@@ -77,6 +78,7 @@
 		04C5F8321E1EC7FA007F704D /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBar.xcassets; sourceTree = "<group>"; };
 		04C5F8341E1ECA27007F704D /* NavBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NavBar.xcassets; sourceTree = "<group>"; };
 		04C5F8371E1FFDE4007F704D /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		04C5F8391E201531007F704D /* Announcement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		159F7407C07B7D548FD6A930 /* Pods_HackCWRUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackCWRUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D4C483F8DC38BC820ACE05 /* Pods-HackCWRUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackCWRUUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackCWRUUITests/Pods-HackCWRUUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69E43D2632AE1B6199E6F63A /* Pods-HackCWRU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackCWRU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackCWRU/Pods-HackCWRU.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				040647F01E18A002003E480F /* HackCWRU.xcdatamodeld */,
 				0495C2D61E1B0ED0003C8CE7 /* API.swift */,
 				0495C2D81E1B11FA003C8CE7 /* APIKeys.swift */,
+				04C5F8391E201531007F704D /* Announcement.swift */,
 				0495C2E01E1B1D6E003C8CE7 /* Event.swift */,
 				0495C2DE1E1B1D04003C8CE7 /* ManagedObject.swift */,
 				049D30F81E1D9FDD007DE948 /* Validatable.swift */,
@@ -523,6 +526,7 @@
 				040647F21E18A002003E480F /* HackCWRU.xcdatamodeld in Sources */,
 				04C5F82F1E1EB89E007F704D /* EventDescriptionCell.swift in Sources */,
 				04C5F82D1E1EB467007F704D /* EventNameCell.swift in Sources */,
+				04C5F83A1E201531007F704D /* Announcement.swift in Sources */,
 				0495C2D71E1B0ED0003C8CE7 /* API.swift in Sources */,
 				0495C2DF1E1B1D04003C8CE7 /* ManagedObject.swift in Sources */,
 				049D30FB1E1DB99F007DE948 /* EventDetailViewController.swift in Sources */,
