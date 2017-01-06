@@ -20,7 +20,7 @@ struct API {
         func host() -> String {
             switch self {
             case .development:
-                return "http://192.168.1.150:3000"
+                return "http://localhost:3000"
             case .production(let host):
                 return host
             }
