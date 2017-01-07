@@ -70,7 +70,7 @@ struct API {
                 let json = JSON(value)
                 var events = [Event]()
                 
-                for (_, event) in json {
+                for (_, event) in json["events"] {
                     events.insert(Event.insertObject(json: event), at: 0)
                 }
                 
@@ -93,7 +93,7 @@ struct API {
                 let json = JSON(value)
                 var announcements = [Announcement]()
                 
-                for (_, announcement) in json {
+                for (_, announcement) in json["announcements"] {
                     announcements.insert(Announcement.insertObject(json: announcement), at: 0)
                 }
                 
