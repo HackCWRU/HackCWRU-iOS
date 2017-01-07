@@ -29,7 +29,7 @@ struct API {
     
     struct Manager {
         
-        let environment: Environment = .development //.production(host: "http://ec2-54-88-206-27.compute-1.amazonaws.com:3000")
+        let environment: Environment = .production(host: "https://hack-cwru.com")
         let version = "v1"
         
         var host: String {
