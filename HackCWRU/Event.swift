@@ -49,6 +49,15 @@ public final class Event: ManagedObject, Validatable {
         return DateFormatter().weekdaySymbols[dayOfWeekIndex - 1]
     }
     
+    var favoritePreviewAction: UIPreviewAction {
+        let title = isFavorite ? "Unfavorite" : "Favorite"
+        
+        return UIPreviewAction(title: title, style: .default) { [weak self] action, viewController in
+            self?.isFavorite = !(self?.isFavorite ?? true)
+            try! AppDelegate.moc.save()
+        }
+    }
+    
 
     // MARK: - "Intializers"
     

@@ -49,6 +49,8 @@ class ScheduleTableViewController: UITableViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 60
+        
+        registerForPreviewing(with: self, sourceView: tableView)
     }
     
     func refresh() {
@@ -142,6 +144,7 @@ class ScheduleTableViewController: UITableViewController {
             vc.delegate = self
         }
     }
+    
 }
 
 
@@ -149,6 +152,29 @@ extension ScheduleTableViewController: EventDetailViewControllerDelegate {
     
     func favoriteStatusDidChange() {
         reload()
+    }
+    
+}
+
+extension ScheduleTableViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        if let indexPath = tableView.indexPathForRow(at: location) {
+            previewingContext.sourceRect = tableView.rectForRow(at: indexPath)
+            
+            let event = events(forSection: indexPath.section)[indexPath.row]
+            let eventViewController = storyboard?.instantiateViewController(withIdentifier: "event-detail-vc") as? EventDetailViewController
+            eventViewController?.event = event
+            eventViewController?.delegate = self
+            return eventViewController
+        }
+        
+        return nil
+    }
+    
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        navigationController?.pushViewController(viewControllerToCommit, animated: false)
     }
     
 }

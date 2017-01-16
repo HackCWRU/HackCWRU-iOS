@@ -20,6 +20,10 @@ class EventDetailViewController: UITableViewController {
     var event: Event!
     var delegate: EventDetailViewControllerDelegate!
     
+    override var previewActionItems: [UIPreviewActionItem] {
+        return [event.favoritePreviewAction]
+    }
+    
     
     @IBOutlet weak var favoriteBarButton: UIBarButtonItem!
     
