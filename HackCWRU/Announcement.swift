@@ -40,10 +40,10 @@ public final class Announcement: ManagedObject, Validatable {
         let announcement: Announcement = AppDelegate.moc.insertObject()
         
         if let json = json {
-            announcement.id = json["_id"].string!
-            announcement.title = json["title"].string!
-            announcement.message = json["message"].string!
-            announcement.updatedAt = json["updatedAt"].string!
+            announcement.id = json["_id"].string ?? ""
+            announcement.title = json["title"].string ?? ""
+            announcement.message = json["message"].string ?? ""
+            announcement.updatedAt = json["updatedAt"].string ?? ""
         }
         
         return announcement

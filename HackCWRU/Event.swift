@@ -56,13 +56,13 @@ public final class Event: ManagedObject, Validatable {
         let event: Event = AppDelegate.moc.insertObject()
         
         if let json = json {
-            event.id = json["_id"].string!
-            event.name = json["name"].string!
-            event.desc = json["description"].string!
-            event.startTime = json["startTime"].string!
-            event.endTime = json["endTime"].string!
-            event.location = json["location"].string!
-            event.updatedAt = json["updated"].string!
+            event.id = json["_id"].string ?? ""
+            event.name = json["name"].string ?? ""
+            event.desc = json["description"].string ?? ""
+            event.startTime = json["startTime"].string ?? ""
+            event.endTime = json["endTime"].string ?? ""
+            event.location = json["location"].string ?? ""
+            event.updatedAt = json["updatedAt"].string ?? ""
         }
         
         event.isFavorite = false
