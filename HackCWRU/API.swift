@@ -100,6 +100,7 @@ struct API {
                     
                     if map.location == location {
                         completion(map)
+                        return
                     }
                 }
                 
