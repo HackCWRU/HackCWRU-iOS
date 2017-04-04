@@ -48,6 +48,10 @@ struct API {
             }
         }
         
+        func mapsURL() -> String {
+            return [baseURL, "maps"].joined(separator: "/")
+        }
+        
         func announcementsURL() -> String {
             return [baseURL, "announcements"].joined(separator: "/")
         }
@@ -79,6 +83,31 @@ struct API {
             case .failure(let error):
                 print(error)
                 completion(nil, false)
+            }
+        }
+    }
+    
+    static func getMap(for location: String, completion: @escaping (Map?) -> Void) {
+        let url = manager.mapsURL()
+        
+        Alamofire.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                
+                for (_, mapJSON) in json["maps"] {
+                    let map = Map(json: mapJSON)
+                    
+                    if map.location == location {
+                        completion(map)
+                    }
+                }
+                
+                completion(nil)
+                
+            case .failure(let error):
+                print(error)
+                completion(nil)
             }
         }
     }
