@@ -56,8 +56,8 @@ struct API {
             return [baseURL, "announcements"].joined(separator: "/")
         }
         
-        func notificationsURL(deviceToken: String) -> String {
-            return [baseURL, "notifications", "register", deviceToken].joined(separator: "/")
+        func notificationsURL() -> String {
+            return [baseURL, "notification", "recipients"].joined(separator: "/")
         }
         
     }
@@ -140,7 +140,7 @@ struct API {
     }
     
     static func registerDeviceForPushNotifications(deviceToken: String) {
-        let url = manager.notificationsURL(deviceToken: deviceToken)
+        let url = manager.notificationsURL()
         let params = [
             "apikey": APIKeys.hackcwru,
             "deviceToken": deviceToken,
