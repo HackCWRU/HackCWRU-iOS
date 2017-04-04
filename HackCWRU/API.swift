@@ -87,24 +87,26 @@ struct API {
         }
     }
     
-    static func getMap(for location: String, completion: @escaping (Map?) -> Void) {
+    static func getMaps(for locations: [String], completion: @escaping ([Map]?) -> Void) {
         let url = manager.mapsURL()
         
         Alamofire.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
+                var maps = [Map]()
                 
-                for (_, mapJSON) in json["maps"] {
-                    let map = Map(json: mapJSON)
-                    
-                    if map.location == location {
-                        completion(map)
-                        return
+                for location in locations {
+                    for (_, mapJSON) in json["maps"] {
+                        let map = Map(json: mapJSON)
+                        
+                        if map.location == location {
+                            maps.append(map)
+                        }
                     }
                 }
                 
-                completion(nil)
+                completion(maps)
                 
             case .failure(let error):
                 print(error)
