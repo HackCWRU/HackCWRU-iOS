@@ -23,6 +23,8 @@ public final class Event: ManagedObject, Validatable {
     @NSManaged public              var updatedAt: String
     @NSManaged public              var isFavorite: Bool
     
+    public var map: Map?
+    
     var date: String {
         let startDate = date(from: startTime)
         

@@ -80,8 +80,11 @@ class ScheduleTableViewController: UITableViewController {
             
             // Refresh the local variable.
             self.events = self.fetchEvents()
-            self.refreshControl?.endRefreshing()
-            self.reload()
+            
+            self.populateEventMaps {
+                self.refreshControl?.endRefreshing()
+                self.reload()
+            }
         }
     }
     
@@ -92,8 +95,22 @@ class ScheduleTableViewController: UITableViewController {
     
     func fetchEvents() -> [Event] {
         let fetchRequest = Event.fetchRequest()
-        let events = try? AppDelegate.moc.fetch(fetchRequest) as! [Event]
-        return events ?? []
+        let events = (try? AppDelegate.moc.fetch(fetchRequest) as! [Event]) ?? []
+        return events
+    }
+    
+    func populateEventMaps(completion: @escaping () -> Void) {
+        let locations = events.map { $0.location }
+        
+        API.getMaps(for: locations) { maps in
+            for event in self.events {
+                if let matchingMap = (maps ?? []).filter({ $0.location == event.location }).first {
+                    event.map = matchingMap
+                }
+            }
+            
+            completion()
+        }
     }
     
 
@@ -112,7 +129,7 @@ class ScheduleTableViewController: UITableViewController {
         let event = events(forSection: indexPath.section)[indexPath.row]
         
         cell.eventName?.text = event.name
-        cell.eventTimeLocation?.text = event.timeSlot + " | " + event.location
+        cell.eventTimeLocation?.text = event.timeSlot + " | " + (event.map?.name ?? event.location)
 
         return cell
     }

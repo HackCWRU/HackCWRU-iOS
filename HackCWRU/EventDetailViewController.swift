@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 protocol EventDetailViewControllerDelegate {
     
@@ -58,7 +59,7 @@ class EventDetailViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,10 +83,25 @@ class EventDetailViewController: UITableViewController {
             return cell
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "event-loc-cell", for: indexPath) as! EventTimeLocationCell
-        cell.locationLabel.text = event.location
-        cell.timeLabel.text = event.weekdaySymbol  + ", " + event.timeSlot
-        cell.isUserInteractionEnabled = false
+        if indexPath.row == 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "event-loc-cell", for: indexPath) as! EventTimeLocationCell
+            cell.locationLabel.text = event.map?.name ?? event.location
+            cell.timeLabel.text = event.weekdaySymbol  + ", " + event.timeSlot
+            cell.isUserInteractionEnabled = false
+            return cell
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "event-map-cell", for: indexPath) as! MapImageCell
+        
+        guard let map = event.map else { return cell }
+        
+        cell.mapImageView.af_setImage(
+            withURL: URL(string: map.imageURL)!,
+            placeholderImage: nil,
+            filter: AspectScaledToFillSizeWithRoundedCornersFilter(size: cell.mapImageView.frame.size, radius: 6.0),
+            imageTransition: .crossDissolve(0.2)
+        )
+        
         return cell
     }
 
