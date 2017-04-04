@@ -43,13 +43,13 @@ class AnnouncementsTableViewController: UITableViewController {
             
             if let announcements = announcements, success {
                 self.announcements.update(to: announcements, saveBlock: { announcement in
-                    print("Save event \(announcement.id)")
+                    print("Save announcement \(announcement.id)")
                 }, updateBlock: { from, to in
-                    print("Update event \(from.id)")
+                    print("Update announcement \(from.id)")
                     from.title = to.title
                     from.message = to.message
                 }, deleteBlock: { announcement in
-                    print("Delete event \(announcement.id)")
+                    print("Delete announcement \(announcement.id)")
                     AppDelegate.moc.delete(announcement)
                 }, completion: {
                     try! AppDelegate.moc.save()
