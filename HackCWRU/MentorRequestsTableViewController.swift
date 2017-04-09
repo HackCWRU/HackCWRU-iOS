@@ -31,6 +31,8 @@ class MentorRequestsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 200
         
         refresh()
     }
@@ -71,11 +73,14 @@ class MentorRequestsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let mentorRequest = mentorRequestsSorted[indexPath.row]
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mentor-requests-cell", for: indexPath) as! AnnouncementCell
         
         if let opened = UTCDate(string: mentorRequest.opened)?.dateForCurrentTimezone {
-            cell.textLabel?.text = "\(opened.dayOfWeek()) \(dateFormatter.string(from: opened))"
+            cell.titleLabel?.text = "\(opened.dayOfWeek()) \(dateFormatter.string(from: opened))"
         }
+
+        cell.timeLabel?.text = mentorRequest.status.uppercased()
+        cell.messageLabel?.text = mentorRequest.description
         
         return cell
     }
