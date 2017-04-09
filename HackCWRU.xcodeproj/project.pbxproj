@@ -167,7 +167,6 @@
 				0406481B1E18A017003E480F /* Views */,
 				0406481A1E18A016003E480F /* Controllers */,
 				04C5F8411E20542B007F704D /* Protocols */,
-				04C5F8361E1FFDC6007F704D /* Helpers */,
 				0406481D1E18A034003E480F /* Supporting */,
 			);
 			path = HackCWRU;
@@ -247,24 +246,25 @@
 		04B2189F1E9AB90300FBB7E9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				04C5F8371E1FFDE4007F704D /* Colors.swift */,
 				04B2189D1E9AB8F500FBB7E9 /* HackCWRUDefaults.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
 		};
-		04C5F8361E1FFDC6007F704D /* Helpers */ = {
+		04B218A01E9AB94800FBB7E9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				04C5F8421E205441007F704D /* TableViewControllerExtension.swift */,
-				04C5F8371E1FFDE4007F704D /* Colors.swift */,
 			);
-			name = Helpers;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		04C5F8411E20542B007F704D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				049D30F81E1D9FDD007DE948 /* Validatable.swift */,
+				04B218A01E9AB94800FBB7E9 /* Extensions */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
