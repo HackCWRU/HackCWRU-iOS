@@ -21,6 +21,7 @@
 		049D30F71E1C44D8007DE948 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D30F61E1C44D8007DE948 /* ScheduleTableViewController.swift */; };
 		049D30F91E1D9FDD007DE948 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D30F81E1D9FDD007DE948 /* Validatable.swift */; };
 		049D30FB1E1DB99F007DE948 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D30FA1E1DB99F007DE948 /* EventDetailViewController.swift */; };
+		04B218981E9AA2F400FBB7E9 /* UTCDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B218971E9AA2F400FBB7E9 /* UTCDate.swift */; };
 		04C5F82D1E1EB467007F704D /* EventNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F82C1E1EB467007F704D /* EventNameCell.swift */; };
 		04C5F82F1E1EB89E007F704D /* EventDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F82E1E1EB89E007F704D /* EventDescriptionCell.swift */; };
 		04C5F8311E1EBBCE007F704D /* EventTimeLocationCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F8301E1EBBCE007F704D /* EventTimeLocationCellCell.swift */; };
@@ -78,6 +79,7 @@
 		049D30F61E1C44D8007DE948 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		049D30F81E1D9FDD007DE948 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
 		049D30FA1E1DB99F007DE948 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		04B218971E9AA2F400FBB7E9 /* UTCDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTCDate.swift; sourceTree = "<group>"; };
 		04C5F82C1E1EB467007F704D /* EventNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNameCell.swift; sourceTree = "<group>"; };
 		04C5F82E1E1EB89E007F704D /* EventDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDescriptionCell.swift; sourceTree = "<group>"; };
 		04C5F8301E1EBBCE007F704D /* EventTimeLocationCellCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTimeLocationCellCell.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				0495C2E01E1B1D6E003C8CE7 /* Event.swift */,
 				0495C2DE1E1B1D04003C8CE7 /* ManagedObject.swift */,
 				04D553661E9318A60081C648 /* Map.swift */,
+				04B218971E9AA2F400FBB7E9 /* UTCDate.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				049D30F91E1D9FDD007DE948 /* Validatable.swift in Sources */,
 				04C5F8431E205441007F704D /* TableViewControllerExtension.swift in Sources */,
 				0495C2E11E1B1D6E003C8CE7 /* Event.swift in Sources */,
+				04B218981E9AA2F400FBB7E9 /* UTCDate.swift in Sources */,
 				040647EA1E18A002003E480F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
