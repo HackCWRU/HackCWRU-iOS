@@ -265,7 +265,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Mentor Requests" id="b1C-fj-40G">
-                        <barButtonItem key="rightBarButtonItem" image="navbar-new-mentor-request" style="plain" id="TZM-bD-rp8">
+                        <barButtonItem key="rightBarButtonItem" image="navbar-new-mentor-request" id="TZM-bD-rp8">
                             <connections>
                                 <segue destination="ZWZ-WQ-0Uz" kind="presentation" id="o2k-Mi-B4r"/>
                             </connections>
@@ -354,7 +354,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mentor Request" id="fMY-ue-6nI">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="bJQ-lz-SHc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bJQ-lz-SHc">
                             <connections>
                                 <action selector="cancel:" destination="VEU-E8-KLz" id="wqU-Yy-XTb"/>
                             </connections>
