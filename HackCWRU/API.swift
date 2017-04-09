@@ -184,10 +184,13 @@ struct API {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                
-                dump(json)
-                
                 let mentorRequest = MentorRequest.insertObject(json: json)
+                
+                do {
+                    try mentorRequest.managedObjectContext?.save()
+                } catch {
+                    print("Error saving mentor request: \(error)")
+                }
                 
                 completion(mentorRequest, true)
             case .failure(let error):
