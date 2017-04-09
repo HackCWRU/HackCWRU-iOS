@@ -16,7 +16,7 @@ class MentorRequestsTableViewController: UITableViewController {
     
     private var mentorRequestsSorted: [MentorRequest] {
         return mentorRequests.sorted { lhs, rhs in
-            return lhs.opened < rhs.opened
+            return lhs.opened > rhs.opened
         }
     }
     
@@ -33,6 +33,7 @@ class MentorRequestsTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
+        tableView.allowsSelection = false
         
         addRefreshControl(selector: #selector(updateMentorRequestStatuses))
         
