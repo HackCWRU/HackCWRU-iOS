@@ -28,7 +28,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnD-ru-EHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1060" y="8"/>
+            <point key="canvasLocation" x="-1215" y="732"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="V39-v2-31M">
@@ -47,7 +47,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uPU-do-ysd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114" y="-287"/>
+            <point key="canvasLocation" x="18" y="-287"/>
         </scene>
         <!--Schedule Table View Controller-->
         <scene sceneID="AXg-vx-OcN">
@@ -265,12 +265,108 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Mentor Requests" id="b1C-fj-40G">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TZM-bD-rp8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TZM-bD-rp8">
+                            <connections>
+                                <segue destination="ZWZ-WQ-0Uz" kind="presentation" id="o2k-Mi-B4r"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfd-Qo-dn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="1090"/>
+            <point key="canvasLocation" x="788" y="1747"/>
+        </scene>
+        <!--Mentor Request-->
+        <scene sceneID="yBZ-C8-ekW">
+            <objects>
+                <viewController id="VEU-E8-KLz" customClass="MentorRequestViewController" customModule="HackCWRU" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0BP-qr-D0a"/>
+                        <viewControllerLayoutGuide type="bottom" id="PXX-Ej-6s7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gho-rE-1pp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k3g-KE-Tvg" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="80" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ouh-fk-Lct"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelYPadding">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Topics (Comma Seperated)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hzm-1Q-X37" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="128" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5u5-Wq-TfH"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelYPadding">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8sc-CQ-E7W" customClass="JVFloatLabeledTextField">
+                                <rect key="frame" x="16" y="176" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="q7l-wl-Idt"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelYPadding">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hzm-1Q-X37" firstAttribute="trailing" secondItem="k3g-KE-Tvg" secondAttribute="trailing" id="0T4-GZ-4bq"/>
+                            <constraint firstItem="8sc-CQ-E7W" firstAttribute="leading" secondItem="Hzm-1Q-X37" secondAttribute="leading" id="3hR-8F-nXB"/>
+                            <constraint firstItem="8sc-CQ-E7W" firstAttribute="top" secondItem="Hzm-1Q-X37" secondAttribute="bottom" constant="8" id="DFE-aG-ApR"/>
+                            <constraint firstItem="Hzm-1Q-X37" firstAttribute="top" secondItem="k3g-KE-Tvg" secondAttribute="bottom" constant="8" id="R60-VN-vFK"/>
+                            <constraint firstItem="k3g-KE-Tvg" firstAttribute="trailing" secondItem="Gho-rE-1pp" secondAttribute="trailingMargin" id="dHD-iV-Q9m"/>
+                            <constraint firstItem="k3g-KE-Tvg" firstAttribute="leading" secondItem="Gho-rE-1pp" secondAttribute="leadingMargin" id="e9q-0k-U9h"/>
+                            <constraint firstItem="8sc-CQ-E7W" firstAttribute="trailing" secondItem="Hzm-1Q-X37" secondAttribute="trailing" id="uB2-yc-Cb9"/>
+                            <constraint firstItem="Hzm-1Q-X37" firstAttribute="leading" secondItem="k3g-KE-Tvg" secondAttribute="leading" id="vnX-VH-1dz"/>
+                            <constraint firstItem="k3g-KE-Tvg" firstAttribute="top" secondItem="0BP-qr-D0a" secondAttribute="bottom" constant="16" id="xEH-hJ-7HQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mentor Request" id="fMY-ue-6nI">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="bJQ-lz-SHc">
+                            <connections>
+                                <action selector="cancel:" destination="VEU-E8-KLz" id="wqU-Yy-XTb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="navbar-submit-mentor-request" id="FD4-h3-H9d">
+                            <connections>
+                                <action selector="submitMentorRequest:" destination="VEU-E8-KLz" id="n55-Lp-56K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="bJQ-lz-SHc" id="ttz-td-tb7"/>
+                        <outlet property="locationDescriptionTextField" destination="8sc-CQ-E7W" id="YWJ-BI-Edj"/>
+                        <outlet property="menteeNameTextField" destination="k3g-KE-Tvg" id="pld-xM-SCf"/>
+                        <outlet property="submitMentorRequestButton" destination="FD4-h3-H9d" id="DaU-xi-ZvS"/>
+                        <outlet property="topicsTextField" destination="Hzm-1Q-X37" id="X85-qD-5yQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7I-De-WBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2288.8000000000002" y="1089.8050974512744"/>
         </scene>
         <!--Mentor Requests-->
         <scene sceneID="NCg-4h-uvi">
@@ -287,7 +383,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIr-FO-TkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114" y="1090"/>
+            <point key="canvasLocation" x="17" y="1747"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="4tf-AK-WFM">
@@ -452,11 +548,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzG-X0-VqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114" y="396"/>
+            <point key="canvasLocation" x="18" y="395"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LQd-yl-i4O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZWZ-WQ-0Uz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gTs-n6-Vg1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VEU-E8-KLz" kind="relationship" relationship="rootViewController" id="fYt-GN-ePC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tr-BS-hkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536.8" y="1089.8050974512744"/>
         </scene>
     </scenes>
     <resources>
         <image name="navbar-favorite" width="22" height="22"/>
+        <image name="navbar-submit-mentor-request" width="22" height="22"/>
         <image name="tabbar-announcements" width="32" height="32"/>
         <image name="tabbar-announcements-filled" width="32" height="32"/>
         <image name="tabbar-mentor-requests" width="32" height="32"/>

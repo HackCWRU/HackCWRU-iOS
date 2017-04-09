@@ -27,6 +27,7 @@
 		04B218A21E9AC44C00FBB7E9 /* MentorRequestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B218A11E9AC44C00FBB7E9 /* MentorRequestsTableViewController.swift */; };
 		04B218A41E9AC7A100FBB7E9 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B218A31E9AC7A100FBB7E9 /* DateExtensions.swift */; };
 		04B218A61E9ACEBD00FBB7E9 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B218A51E9ACEBD00FBB7E9 /* ArrayExtensions.swift */; };
+		04B218A81E9AD64500FBB7E9 /* MentorRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B218A71E9AD64500FBB7E9 /* MentorRequestViewController.swift */; };
 		04C5F82D1E1EB467007F704D /* EventNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F82C1E1EB467007F704D /* EventNameCell.swift */; };
 		04C5F82F1E1EB89E007F704D /* EventDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F82E1E1EB89E007F704D /* EventDescriptionCell.swift */; };
 		04C5F8311E1EBBCE007F704D /* EventTimeLocationCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F8301E1EBBCE007F704D /* EventTimeLocationCellCell.swift */; };
@@ -90,6 +91,7 @@
 		04B218A11E9AC44C00FBB7E9 /* MentorRequestsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorRequestsTableViewController.swift; sourceTree = "<group>"; };
 		04B218A31E9AC7A100FBB7E9 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		04B218A51E9ACEBD00FBB7E9 /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		04B218A71E9AD64500FBB7E9 /* MentorRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorRequestViewController.swift; sourceTree = "<group>"; };
 		04C5F82C1E1EB467007F704D /* EventNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNameCell.swift; sourceTree = "<group>"; };
 		04C5F82E1E1EB89E007F704D /* EventDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDescriptionCell.swift; sourceTree = "<group>"; };
 		04C5F8301E1EBBCE007F704D /* EventTimeLocationCellCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTimeLocationCellCell.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				049D30FA1E1DB99F007DE948 /* EventDetailViewController.swift */,
 				049D30F61E1C44D8007DE948 /* ScheduleTableViewController.swift */,
 				04B218A11E9AC44C00FBB7E9 /* MentorRequestsTableViewController.swift */,
+				04B218A71E9AD64500FBB7E9 /* MentorRequestViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C5F83C1E201710007F704D /* AnnouncementsTableViewController.swift in Sources */,
+				04B218A81E9AD64500FBB7E9 /* MentorRequestViewController.swift in Sources */,
 				04C5F8311E1EBBCE007F704D /* EventTimeLocationCellCell.swift in Sources */,
 				040647F21E18A002003E480F /* HackCWRU.xcdatamodeld in Sources */,
 				04C5F8401E204474007F704D /* AnnouncementCell.swift in Sources */,
