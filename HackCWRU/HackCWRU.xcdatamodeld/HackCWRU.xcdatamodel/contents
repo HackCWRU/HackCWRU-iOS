@@ -19,6 +19,7 @@
     <entity name="MentorRequest" representedClassName=".MentorRequest" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="locationDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="menteeName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="opened" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="topics" optional="YES" attributeType="String" syncable="YES"/>
@@ -26,6 +27,6 @@
     <elements>
         <element name="Announcement" positionX="-63" positionY="45" width="128" height="105"/>
         <element name="Event" positionX="-63" positionY="-18" width="128" height="165"/>
-        <element name="MentorRequest" positionX="-63" positionY="45" width="128" height="120"/>
+        <element name="MentorRequest" positionX="-63" positionY="45" width="128" height="135"/>
     </elements>
 </model>

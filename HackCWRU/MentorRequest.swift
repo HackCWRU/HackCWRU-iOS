@@ -16,9 +16,15 @@ public final class MentorRequest: ManagedObject {
     
     @NSManaged public private(set) var id: String
     @NSManaged public              var locationDescription: String
+    @NSManaged public              var menteeName: String
     @NSManaged public              var opened: String
     @NSManaged public              var status: String
     @NSManaged public              var topics: String // Comma seperated list
+    
+    
+    public override var description: String {
+        return "\(menteeName) requested help with \(topics)"
+    }
     
     
     // MARK: - "Intializers"
@@ -29,6 +35,7 @@ public final class MentorRequest: ManagedObject {
         if let json = json {
             mentorRequest.id = json["_id"].string ?? ""
             mentorRequest.locationDescription = json["locationDescription"].string ?? ""
+            mentorRequest.menteeName = json["mentee"]["name"].string ?? ""
             mentorRequest.opened = json["meta"]["opened"].string ?? ""
             mentorRequest.status = json["status"].string ?? "open"
             mentorRequest.topics = (json["topics"].arrayObject as? [String])?.joined(separator: ",") ?? ""
