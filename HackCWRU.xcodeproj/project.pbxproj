@@ -25,6 +25,7 @@
 		04B2189A1E9AB39100FBB7E9 /* MentorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B218991E9AB39100FBB7E9 /* MentorRequest.swift */; };
 		04B2189E1E9AB8F500FBB7E9 /* HackCWRUDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2189D1E9AB8F500FBB7E9 /* HackCWRUDefaults.swift */; };
 		04B218A21E9AC44C00FBB7E9 /* MentorRequestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B218A11E9AC44C00FBB7E9 /* MentorRequestsTableViewController.swift */; };
+		04B218A41E9AC7A100FBB7E9 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B218A31E9AC7A100FBB7E9 /* DateExtensions.swift */; };
 		04C5F82D1E1EB467007F704D /* EventNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F82C1E1EB467007F704D /* EventNameCell.swift */; };
 		04C5F82F1E1EB89E007F704D /* EventDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F82E1E1EB89E007F704D /* EventDescriptionCell.swift */; };
 		04C5F8311E1EBBCE007F704D /* EventTimeLocationCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F8301E1EBBCE007F704D /* EventTimeLocationCellCell.swift */; };
@@ -86,6 +87,7 @@
 		04B218991E9AB39100FBB7E9 /* MentorRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorRequest.swift; sourceTree = "<group>"; };
 		04B2189D1E9AB8F500FBB7E9 /* HackCWRUDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackCWRUDefaults.swift; sourceTree = "<group>"; };
 		04B218A11E9AC44C00FBB7E9 /* MentorRequestsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorRequestsTableViewController.swift; sourceTree = "<group>"; };
+		04B218A31E9AC7A100FBB7E9 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		04C5F82C1E1EB467007F704D /* EventNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNameCell.swift; sourceTree = "<group>"; };
 		04C5F82E1E1EB89E007F704D /* EventDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDescriptionCell.swift; sourceTree = "<group>"; };
 		04C5F8301E1EBBCE007F704D /* EventTimeLocationCellCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTimeLocationCellCell.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		04B218A01E9AB94800FBB7E9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				04B218A31E9AC7A100FBB7E9 /* DateExtensions.swift */,
 				04C5F8421E205441007F704D /* TableViewControllerExtension.swift */,
 			);
 			name = Extensions;
@@ -595,6 +598,7 @@
 				04D553691E931C8C0081C648 /* MapImageCell.swift in Sources */,
 				04C5F83A1E201531007F704D /* Announcement.swift in Sources */,
 				04B218A21E9AC44C00FBB7E9 /* MentorRequestsTableViewController.swift in Sources */,
+				04B218A41E9AC7A100FBB7E9 /* DateExtensions.swift in Sources */,
 				0495C2D71E1B0ED0003C8CE7 /* API.swift in Sources */,
 				0495C2DF1E1B1D04003C8CE7 /* ManagedObject.swift in Sources */,
 				04D553671E9318A60081C648 /* Map.swift in Sources */,

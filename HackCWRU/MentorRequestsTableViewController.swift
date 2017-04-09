@@ -23,7 +23,6 @@ class MentorRequestsTableViewController: UITableViewController {
     private lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = UTCDate.stringFormat
-        dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .short
         return dateFormatter
     }()
@@ -75,7 +74,7 @@ class MentorRequestsTableViewController: UITableViewController {
         let cell = UITableViewCell()
         
         if let opened = UTCDate(string: mentorRequest.opened)?.dateForCurrentTimezone {
-            cell.textLabel?.text = dateFormatter.string(from: opened)
+            cell.textLabel?.text = "\(opened.dayOfWeek()) \(dateFormatter.string(from: opened))"
         }
         
         return cell

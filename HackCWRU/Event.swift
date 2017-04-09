@@ -26,8 +26,6 @@ public final class Event: ManagedObject, Validatable {
     public var map: Map?
     
     var date: String {
-        let startDate = date(from: startTime)
-        
         let timeFormatter = DateFormatter()
         timeFormatter.dateStyle = .medium
         
@@ -35,7 +33,6 @@ public final class Event: ManagedObject, Validatable {
     }
     
     var timeSlot: String {
-        let startDate = date(from: startTime)
         let endDate = date(from: endTime)
         
         let timeFormatter = DateFormatter()
@@ -44,11 +41,8 @@ public final class Event: ManagedObject, Validatable {
         return timeFormatter.string(from: startDate) + " - " + timeFormatter.string(from: endDate)
     }
     
-    var weekdaySymbol: String {
-        let startDate = date(from: startTime)
-        let dayOfWeekIndex = Calendar.current.component(.weekday, from: startDate)
-        
-        return DateFormatter().weekdaySymbols[dayOfWeekIndex - 1]
+    var startDate: Date {
+        return date(from: startTime)
     }
     
     var favoritePreviewAction: UIPreviewAction {
@@ -135,7 +129,7 @@ extension Array where Element: Event {
         
         sortedByDate.forEach { event in
             // Eliminate the timestamp from each date.
-            var eventDate = event.date(from: event.startTime)
+            var eventDate = event.startDate
             let comps = Calendar.current.dateComponents([.day, .month, .year], from: eventDate)
             eventDate = Calendar.current.date(from: comps)!
             

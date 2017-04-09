@@ -86,7 +86,7 @@ class EventDetailViewController: UITableViewController {
         if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "event-loc-cell", for: indexPath) as! EventTimeLocationCell
             cell.locationLabel.text = event.map?.name ?? event.location
-            cell.timeLabel.text = event.weekdaySymbol  + ", " + event.timeSlot
+            cell.timeLabel.text = event.startDate.dayOfWeek()  + ", " + event.timeSlot
             cell.isUserInteractionEnabled = false
             return cell
         }

@@ -26,10 +26,7 @@ public final class Announcement: ManagedObject, Validatable {
         timeFormatter.timeStyle = .short
         timeFormatter.timeZone = .current
         
-        let dayOfWeek = Calendar.current.component(.weekday, from: date)
-        let weekdayLabel = timeFormatter.shortWeekdaySymbols[dayOfWeek - 1]
-        
-        return weekdayLabel + " " + timeFormatter.string(from: date)
+        return "\(date.dayOfWeek(using: timeFormatter.shortWeekdaySymbols)) \(timeFormatter.string(from: date))"
     }
     
     

@@ -135,7 +135,7 @@ class ScheduleTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return events(forSection: section).first?.weekdaySymbol ?? sectionDateFormatter.string(from: sectionDates[section])
+        return events(forSection: section).first?.startDate.dayOfWeek() ?? sectionDateFormatter.string(from: sectionDates[section])
     }
     
     func events(forSection section: Int) -> [Event] {
