@@ -9,6 +9,7 @@ target 'HackCWRU' do
   pod 'SwiftyJSON'
   pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'JVFloatLabeledTextField'
 
   target 'HackCWRUTests' do
     inherit! :search_paths

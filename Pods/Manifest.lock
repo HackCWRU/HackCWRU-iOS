@@ -2,18 +2,21 @@ PODS:
   - Alamofire (4.2.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - JVFloatLabeledTextField (1.1.1)
   - SwiftyJSON (3.1.3)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - JVFloatLabeledTextField
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  JVFloatLabeledTextField: 0e5524b097f102036214dd8279edc8ecf08b5e18
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
 
-PODFILE CHECKSUM: a4fb124a7f6cedca5d52975c570eba7662a302d8
+PODFILE CHECKSUM: c1f089a341148c270daf4af2e15152d08f9c75c4
 
 COCOAPODS: 1.1.1
