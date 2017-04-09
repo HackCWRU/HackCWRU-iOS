@@ -100,7 +100,7 @@ public final class Event: ManagedObject, Validatable {
     
     func date(from string: String) -> Date {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-mm-dd HH:mm:ss"
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter.date(from: string)!
     }
     
