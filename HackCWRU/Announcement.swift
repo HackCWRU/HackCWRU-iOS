@@ -19,16 +19,15 @@ public final class Announcement: ManagedObject, Validatable {
     @NSManaged public              var message: String
     @NSManaged public              var updatedAt: String
     
-    var sentTimestamp: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-        let date = dateFormatter.date(from: updatedAt)!
-        
+    var sentTimestamp: String? {
+        guard let date = UTCDate(string: updatedAt)?.dateForCurrentTimezone else { return nil }
+
         let timeFormatter = DateFormatter()
         timeFormatter.timeStyle = .short
+        timeFormatter.timeZone = .current
         
         let dayOfWeek = Calendar.current.component(.weekday, from: date)
-        let weekdayLabel = dateFormatter.shortWeekdaySymbols[dayOfWeek]
+        let weekdayLabel = timeFormatter.shortWeekdaySymbols[dayOfWeek - 1]
         
         return weekdayLabel + " " + timeFormatter.string(from: date)
     }
