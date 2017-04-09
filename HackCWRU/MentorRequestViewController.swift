@@ -16,8 +16,20 @@ class MentorRequestViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var submitMentorRequestButton: UIBarButtonItem!
     
+    private var canSubmitMentorRequest: Bool {
+        guard let menteeName = menteeNameTextField.text else { return false }
+        guard let topics = topicsTextField.text else { return false }
+        guard let location = locationDescriptionTextField.text else { return false }
+        
+        return menteeName.characters.count > 0 && topics.characters.count > 0 && location.characters.count > 0
+    }
+    
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func textFieldDidChange(_ sender: UITextField) {
+        submitMentorRequestButton.isEnabled = canSubmitMentorRequest
     }
     
     @IBAction func submitMentorRequest(_ sender: UIBarButtonItem) {
@@ -49,6 +61,8 @@ class MentorRequestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        submitMentorRequestButton.isEnabled = false
     }
     
 }

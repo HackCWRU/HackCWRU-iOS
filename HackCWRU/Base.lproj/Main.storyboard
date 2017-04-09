@@ -265,7 +265,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Mentor Requests" id="b1C-fj-40G">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TZM-bD-rp8">
+                        <barButtonItem key="rightBarButtonItem" image="navbar-new-mentor-request" style="plain" id="TZM-bD-rp8">
                             <connections>
                                 <segue destination="ZWZ-WQ-0Uz" kind="presentation" id="o2k-Mi-B4r"/>
                             </connections>
@@ -301,6 +301,9 @@
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="VEU-E8-KLz" eventType="editingChanged" id="D5S-gU-3TA"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Topics (Comma Seperated)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hzm-1Q-X37" customClass="JVFloatLabeledTextField">
                                 <rect key="frame" x="16" y="128" width="343" height="40"/>
@@ -315,6 +318,9 @@
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="VEU-E8-KLz" eventType="editingChanged" id="F8z-zy-x11"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8sc-CQ-E7W" customClass="JVFloatLabeledTextField">
                                 <rect key="frame" x="16" y="176" width="343" height="40"/>
@@ -329,6 +335,9 @@
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldDidChange:" destination="VEU-E8-KLz" eventType="editingChanged" id="7Ls-1d-6l2"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -571,6 +580,7 @@
     </scenes>
     <resources>
         <image name="navbar-favorite" width="22" height="22"/>
+        <image name="navbar-new-mentor-request" width="22" height="22"/>
         <image name="navbar-submit-mentor-request" width="22" height="22"/>
         <image name="tabbar-announcements" width="32" height="32"/>
         <image name="tabbar-announcements-filled" width="32" height="32"/>
