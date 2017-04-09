@@ -37,6 +37,8 @@ class MentorRequestViewController: UIViewController {
         guard let topics = topicsTextField.text else { return }
         guard let location = locationDescriptionTextField.text else { return }
         
+        HackCWRUDefaults.lastSubmittedMenteeName = menteeName
+        
         self.cancelButton.isEnabled = false
         
         let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
@@ -63,6 +65,13 @@ class MentorRequestViewController: UIViewController {
         super.viewDidLoad()
         
         submitMentorRequestButton.isEnabled = false
+        
+        if let menteeName = HackCWRUDefaults.lastSubmittedMenteeName {
+            menteeNameTextField.text = menteeName
+            topicsTextField.becomeFirstResponder()
+        } else {
+            menteeNameTextField.becomeFirstResponder()
+        }
     }
     
 }

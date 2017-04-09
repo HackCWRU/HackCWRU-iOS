@@ -20,4 +20,14 @@ struct HackCWRUDefaults {
         }
     }
     
+    static var lastSubmittedMenteeName: String? {
+        get {
+            return UserDefaults.standard.value(forKey: #function) as? String
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: #function)
+        }
+    }
+    
 }
