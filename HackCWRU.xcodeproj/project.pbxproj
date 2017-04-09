@@ -23,6 +23,7 @@
 		049D30FB1E1DB99F007DE948 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D30FA1E1DB99F007DE948 /* EventDetailViewController.swift */; };
 		04B218981E9AA2F400FBB7E9 /* UTCDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B218971E9AA2F400FBB7E9 /* UTCDate.swift */; };
 		04B2189A1E9AB39100FBB7E9 /* MentorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B218991E9AB39100FBB7E9 /* MentorRequest.swift */; };
+		04B2189E1E9AB8F500FBB7E9 /* HackCWRUDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2189D1E9AB8F500FBB7E9 /* HackCWRUDefaults.swift */; };
 		04C5F82D1E1EB467007F704D /* EventNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F82C1E1EB467007F704D /* EventNameCell.swift */; };
 		04C5F82F1E1EB89E007F704D /* EventDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F82E1E1EB89E007F704D /* EventDescriptionCell.swift */; };
 		04C5F8311E1EBBCE007F704D /* EventTimeLocationCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5F8301E1EBBCE007F704D /* EventTimeLocationCellCell.swift */; };
@@ -82,6 +83,7 @@
 		049D30FA1E1DB99F007DE948 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		04B218971E9AA2F400FBB7E9 /* UTCDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTCDate.swift; sourceTree = "<group>"; };
 		04B218991E9AB39100FBB7E9 /* MentorRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorRequest.swift; sourceTree = "<group>"; };
+		04B2189D1E9AB8F500FBB7E9 /* HackCWRUDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackCWRUDefaults.swift; sourceTree = "<group>"; };
 		04C5F82C1E1EB467007F704D /* EventNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNameCell.swift; sourceTree = "<group>"; };
 		04C5F82E1E1EB89E007F704D /* EventDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDescriptionCell.swift; sourceTree = "<group>"; };
 		04C5F8301E1EBBCE007F704D /* EventTimeLocationCellCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTimeLocationCellCell.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				040647ED1E18A002003E480F /* Main.storyboard */,
+				04B2189F1E9AB90300FBB7E9 /* Common */,
 				0406481C1E18A018003E480F /* Models */,
 				0406481B1E18A017003E480F /* Views */,
 				0406481A1E18A016003E480F /* Controllers */,
@@ -239,6 +242,14 @@
 				040647F81E18A002003E480F /* Info.plist */,
 			);
 			name = Supporting;
+			sourceTree = "<group>";
+		};
+		04B2189F1E9AB90300FBB7E9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				04B2189D1E9AB8F500FBB7E9 /* HackCWRUDefaults.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		04C5F8361E1FFDC6007F704D /* Helpers */ = {
@@ -577,6 +588,7 @@
 				04C5F82F1E1EB89E007F704D /* EventDescriptionCell.swift in Sources */,
 				04C5F82D1E1EB467007F704D /* EventNameCell.swift in Sources */,
 				04B2189A1E9AB39100FBB7E9 /* MentorRequest.swift in Sources */,
+				04B2189E1E9AB8F500FBB7E9 /* HackCWRUDefaults.swift in Sources */,
 				04D553691E931C8C0081C648 /* MapImageCell.swift in Sources */,
 				04C5F83A1E201531007F704D /* Announcement.swift in Sources */,
 				0495C2D71E1B0ED0003C8CE7 /* API.swift in Sources */,
