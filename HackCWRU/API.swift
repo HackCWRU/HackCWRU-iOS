@@ -64,6 +64,10 @@ struct API {
             return [baseURL, "mentor", "requests"].joined(separator: "/")
         }
         
+        func mentorRequestURL(id: String) -> String {
+            return [baseURL, "mentor", "request", id].joined(separator: "/")
+        }
+        
     }
     
     static let manager = Manager()
@@ -158,6 +162,35 @@ struct API {
                 print(json)
             case .failure(let error):
                 print(error)
+            }
+        }
+    }
+    
+    static func updateMentorRequestStatus(for mentorRequest: MentorRequest, completion: @escaping (MentorRequest) -> Void) {
+        let url = manager.mentorRequestURL(id: mentorRequest.id)
+        
+        let params: [String : Any] = [
+            "apikey": APIKeys.hackcwru
+        ]
+        
+        Alamofire.request(url, method: .get, parameters: params).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                
+                mentorRequest.status = json["status"].string ?? "open"
+                
+                do {
+                    try mentorRequest.managedObjectContext?.save()
+                } catch {
+                    print("Error saving mentor request: \(error)")
+                }
+                
+                completion(mentorRequest)
+                
+            case .failure(let error):
+                print(error)
+                completion(mentorRequest)
             }
         }
     }
