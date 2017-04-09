@@ -25,6 +25,10 @@ class MentorRequestViewController: UIViewController {
     }
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
+        [menteeNameTextField, topicsTextField, locationDescriptionTextField].forEach { textField in
+            textField.resignFirstResponder()
+        }
+        
         dismiss(animated: true, completion: nil)
     }
     
