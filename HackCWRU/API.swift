@@ -151,7 +151,7 @@ struct API {
             "os": "ios"
         ]
         
-        Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
