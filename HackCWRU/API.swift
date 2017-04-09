@@ -60,6 +60,10 @@ struct API {
             return [baseURL, "notification", "recipients"].joined(separator: "/")
         }
         
+        func mentorRequestsURL() -> String {
+            return [baseURL, "mentor", "requests"].joined(separator: "/")
+        }
+        
     }
     
     static let manager = Manager()
@@ -152,6 +156,40 @@ struct API {
             case .success(let value):
                 let json = JSON(value)
                 print(json)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    static func submitMentorRequest(menteeName: String, topics: String, locationDescription: String,
+                                    completion:  @escaping (MentorRequest?, Bool) -> Void) {
+        guard let deviceToken = HackCWRUDefaults.deviceToken else {
+            completion(nil, false)
+            return
+        }
+        
+        let url = manager.mentorRequestsURL()
+        let params: [String : Any] = [
+            "apikey": APIKeys.hackcwru,
+            "locationDescription": locationDescription,
+            "topics": topics.replacingOccurrences(of: ", ", with: ","),
+            "mentee": [
+                "name": menteeName,
+                "deviceId": deviceToken
+            ]
+        ]
+        
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                
+                dump(json)
+                
+                let mentorRequest = MentorRequest.insertObject(json: json)
+                
+                completion(mentorRequest, true)
             case .failure(let error):
                 print(error)
             }
