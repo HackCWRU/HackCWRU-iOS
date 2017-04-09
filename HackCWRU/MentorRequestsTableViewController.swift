@@ -34,12 +34,24 @@ class MentorRequestsTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
         
+        addRefreshControl(selector: #selector(updateMentorRequestStatuses))
+        
         refresh()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        updateMentorRequestStatuses()
+    }
+    
+    private func refresh() {
+        mentorRequests = fetchMentorRequests()
+        refreshControl?.endRefreshing()
+        tableView.reloadData()
+    }
+    
+    @objc private func updateMentorRequestStatuses() {
         self.mentorRequests.forEach { mentorRequest in
             API.updateMentorRequestStatus(for: mentorRequest) { _ in
                 DispatchQueue.main.async {
@@ -47,11 +59,6 @@ class MentorRequestsTableViewController: UITableViewController {
                 }
             }
         }
-    }
-    
-    private func refresh() {
-        mentorRequests = fetchMentorRequests()
-        tableView.reloadData()
     }
     
     func fetchMentorRequests() -> [MentorRequest] {
