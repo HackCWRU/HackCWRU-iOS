@@ -23,7 +23,8 @@ public final class MentorRequest: ManagedObject {
     
     
     public override var description: String {
-        return "\(menteeName) requested help with \(topics)"
+        let topicList = topics.components(separatedBy: ",").listFormatted()
+        return "\(menteeName) requested help with \(topicList)."
     }
     
     
