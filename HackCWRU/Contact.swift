@@ -13,6 +13,7 @@ public struct Contact {
     
     public let name: String
     public let phone: String
+    public let groups: [String]
     
     public var callMessage: String {
         return "Call \(name)"
@@ -24,12 +25,30 @@ public struct Contact {
         
         self.name = name
         self.phone = phone
+        self.groups = json["groups"].array?.flatMap({ $0.string }) ?? []
     }
     
     public func call() {
         if let url = URL(string: "tel://\(phone)"), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
+    }
+    
+}
+
+
+extension Array where Element == Contact {
+    
+    public func grouped() -> [String: [Contact]] {
+        var groupedContacts = [String: [Contact]]()
+        
+        forEach { contact in
+            contact.groups.forEach { group in
+                groupedContacts[group]?.append(contact)
+            }
+        }
+        
+        return groupedContacts
     }
     
 }
