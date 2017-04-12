@@ -14,6 +14,7 @@
 		040647F71E18A002003E480F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040647F51E18A002003E480F /* LaunchScreen.storyboard */; };
 		040648021E18A002003E480F /* HackCWRUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040648011E18A002003E480F /* HackCWRUTests.swift */; };
 		0406480D1E18A002003E480F /* HackCWRUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406480C1E18A002003E480F /* HackCWRUUITests.swift */; };
+		040F69481E9E6E600033F8A4 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F69471E9E6E600033F8A4 /* ContactsTableViewController.swift */; };
 		0487B0141E9E03470021C086 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487B0131E9E03470021C086 /* Contact.swift */; };
 		0495C2D71E1B0ED0003C8CE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495C2D61E1B0ED0003C8CE7 /* API.swift */; };
 		0495C2D91E1B11FA003C8CE7 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495C2D81E1B11FA003C8CE7 /* APIKeys.swift */; };
@@ -78,6 +79,7 @@
 		040648081E18A002003E480F /* HackCWRUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackCWRUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0406480C1E18A002003E480F /* HackCWRUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackCWRUUITests.swift; sourceTree = "<group>"; };
 		0406480E1E18A002003E480F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040F69471E9E6E600033F8A4 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		045B84341E18A9F700A7717A /* HackCWRU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HackCWRU.entitlements; sourceTree = "<group>"; };
 		0487B0131E9E03470021C086 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		0495C2D61E1B0ED0003C8CE7 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				04C5F83B1E201710007F704D /* AnnouncementsTableViewController.swift */,
+				040F69471E9E6E600033F8A4 /* ContactsTableViewController.swift */,
 				049D30FA1E1DB99F007DE948 /* EventDetailViewController.swift */,
 				049D30F61E1C44D8007DE948 /* ScheduleTableViewController.swift */,
 				04B218A11E9AC44C00FBB7E9 /* MentorRequestsTableViewController.swift */,
@@ -602,6 +605,7 @@
 				040647F21E18A002003E480F /* HackCWRU.xcdatamodeld in Sources */,
 				04C5F8401E204474007F704D /* AnnouncementCell.swift in Sources */,
 				04C5F82F1E1EB89E007F704D /* EventDescriptionCell.swift in Sources */,
+				040F69481E9E6E600033F8A4 /* ContactsTableViewController.swift in Sources */,
 				04C5F82D1E1EB467007F704D /* EventNameCell.swift in Sources */,
 				04B2189A1E9AB39100FBB7E9 /* MentorRequest.swift in Sources */,
 				04B2189E1E9AB8F500FBB7E9 /* HackCWRUDefaults.swift in Sources */,

@@ -105,6 +105,11 @@
                     <navigationItem key="navigationItem" id="rfa-88-Dqu">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Schedule" id="9O5-gl-JqL"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="3MJ-Ul-Thx">
+                            <connections>
+                                <segue destination="31b-zM-xiD" kind="presentation" id="sDT-UT-1Ed"/>
+                            </connections>
+                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="PJb-na-GUf">
                             <rect key="frame" x="112.5" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -393,6 +398,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIr-FO-TkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="17" y="1747"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="1l2-Y8-JBj">
+            <objects>
+                <tableViewController id="GXB-fZ-Db9" customClass="ContactsTableViewController" customModule="HackCWRU" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="0Gw-7d-5gl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="GXB-fZ-Db9" id="Oub-kJ-xV3"/>
+                            <outlet property="delegate" destination="GXB-fZ-Db9" id="09B-AT-7yh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Contacts" id="5G0-Nf-4Op">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="n9s-tX-Rc7"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulu-HB-TNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2289" y="-967"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5xs-cv-gLs">
+            <objects>
+                <navigationController id="31b-zM-xiD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O3Z-YP-QQg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GXB-fZ-Db9" kind="relationship" relationship="rootViewController" id="PxG-PC-Lj8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bB8-NV-PLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="-967"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="4tf-AK-WFM">
