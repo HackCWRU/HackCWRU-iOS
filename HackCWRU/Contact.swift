@@ -44,7 +44,12 @@ extension Array where Element == Contact {
         
         forEach { contact in
             contact.groups.forEach { group in
-                groupedContacts[group]?.append(contact)
+                
+                if groupedContacts[group] == nil {
+                    groupedContacts[group] = [contact]
+                } else {
+                    groupedContacts[group]?.append(contact)
+                }
             }
         }
         
