@@ -68,6 +68,10 @@ struct API {
             return [baseURL, "mentor", "request", id].joined(separator: "/")
         }
         
+        func visibleContactsURL() -> String {
+            return [baseURL, "contacts", "visible"].joined(separator: "/")
+        }
+        
     }
     
     static let manager = Manager()
@@ -228,6 +232,28 @@ struct API {
                 completion(mentorRequest, true)
             case .failure(let error):
                 print(error)
+            }
+        }
+    }
+    
+    static func getAllVisibleContacts(completion: @escaping ([Contact]?, Bool) -> Void) {
+        let url = manager.visibleContactsURL()
+        
+        Alamofire.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                var contacts = [Contact?]()
+                
+                for (_, contact) in json["contacts"] {
+                    contacts.append(Contact(json: contact))
+                }
+                
+                completion(contacts.flatMap { $0 }, true)
+                
+            case .failure(let error):
+                print(error)
+                completion(nil, false)
             }
         }
     }
