@@ -14,6 +14,7 @@
 		040647F71E18A002003E480F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040647F51E18A002003E480F /* LaunchScreen.storyboard */; };
 		040648021E18A002003E480F /* HackCWRUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040648011E18A002003E480F /* HackCWRUTests.swift */; };
 		0406480D1E18A002003E480F /* HackCWRUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406480C1E18A002003E480F /* HackCWRUUITests.swift */; };
+		0487B0141E9E03470021C086 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487B0131E9E03470021C086 /* Contact.swift */; };
 		0495C2D71E1B0ED0003C8CE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495C2D61E1B0ED0003C8CE7 /* API.swift */; };
 		0495C2D91E1B11FA003C8CE7 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495C2D81E1B11FA003C8CE7 /* APIKeys.swift */; };
 		0495C2DF1E1B1D04003C8CE7 /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495C2DE1E1B1D04003C8CE7 /* ManagedObject.swift */; };
@@ -78,6 +79,7 @@
 		0406480C1E18A002003E480F /* HackCWRUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackCWRUUITests.swift; sourceTree = "<group>"; };
 		0406480E1E18A002003E480F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045B84341E18A9F700A7717A /* HackCWRU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HackCWRU.entitlements; sourceTree = "<group>"; };
+		0487B0131E9E03470021C086 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		0495C2D61E1B0ED0003C8CE7 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0495C2D81E1B11FA003C8CE7 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		0495C2DE1E1B1D04003C8CE7 /* ManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObject.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				0495C2D61E1B0ED0003C8CE7 /* API.swift */,
 				0495C2D81E1B11FA003C8CE7 /* APIKeys.swift */,
 				04C5F8391E201531007F704D /* Announcement.swift */,
+				0487B0131E9E03470021C086 /* Contact.swift */,
 				0495C2E01E1B1D6E003C8CE7 /* Event.swift */,
 				0495C2DE1E1B1D04003C8CE7 /* ManagedObject.swift */,
 				04D553661E9318A60081C648 /* Map.swift */,
@@ -613,6 +616,7 @@
 				0495C2D91E1B11FA003C8CE7 /* APIKeys.swift in Sources */,
 				04C5F8381E1FFDE4007F704D /* Colors.swift in Sources */,
 				049D30F71E1C44D8007DE948 /* ScheduleTableViewController.swift in Sources */,
+				0487B0141E9E03470021C086 /* Contact.swift in Sources */,
 				04C5F83E1E203E7B007F704D /* EventCell.swift in Sources */,
 				049D30F91E1D9FDD007DE948 /* Validatable.swift in Sources */,
 				04C5F8431E205441007F704D /* TableViewControllerExtension.swift in Sources */,
