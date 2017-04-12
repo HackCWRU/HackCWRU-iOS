@@ -64,6 +64,7 @@ class ContactsTableViewController: UITableViewController {
         let cell = UITableViewCell()
         
         cell.textLabel?.text = contact(for: indexPath).name
+        cell.imageView?.image = #imageLiteral(resourceName: "phone")
         
         return cell
     }
