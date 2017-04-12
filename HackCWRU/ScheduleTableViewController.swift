@@ -20,6 +20,8 @@ class ScheduleTableViewController: UITableViewController {
         return formatter
     }()
     
+    private var storedContactButton: UIBarButtonItem?
+    
     private var events = [Event]() {
         didSet {
             eventsGroupAndSorted = events.groupAndSort(favoritesOnly)
@@ -35,6 +37,7 @@ class ScheduleTableViewController: UITableViewController {
     }
     
     @IBOutlet weak var favoritesControl: UISegmentedControl!
+    @IBOutlet weak var contactButton: UIBarButtonItem!
     
     @IBAction func didChangeFavoritesFilter(_ sender: UISegmentedControl) {
         reload()
@@ -42,6 +45,8 @@ class ScheduleTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        storedContactButton = contactButton
         
         addRefreshControl(selector: #selector(refresh))
         hideExcessDividers()
@@ -84,6 +89,16 @@ class ScheduleTableViewController: UITableViewController {
             self.populateEventMaps {
                 self.refreshControl?.endRefreshing()
                 self.reload()
+            }
+        }
+        
+        API.getAllVisibleContacts { contacts, succeeded in
+            DispatchQueue.main.async {
+                if let contacts = contacts, succeeded, contacts.count > 0 {
+                    self.navigationItem.leftBarButtonItem = self.storedContactButton
+                } else {
+                    self.navigationItem.leftBarButtonItem = nil
+                }
             }
         }
     }

@@ -23,6 +23,10 @@ class ContactsTableViewController: UITableViewController {
     private var sortedGroups: [String] {
         return groupedContacts.keys.sorted(by: >)
     }
+    
+    @IBAction func done(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

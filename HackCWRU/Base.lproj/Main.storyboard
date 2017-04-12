@@ -105,7 +105,7 @@
                     <navigationItem key="navigationItem" id="rfa-88-Dqu">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Schedule" id="9O5-gl-JqL"/>
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="3MJ-Ul-Thx">
+                        <barButtonItem key="leftBarButtonItem" image="navbar-contact-by-phone" id="3MJ-Ul-Thx">
                             <connections>
                                 <segue destination="31b-zM-xiD" kind="presentation" id="sDT-UT-1Ed"/>
                             </connections>
@@ -123,6 +123,7 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
+                        <outlet property="contactButton" destination="3MJ-Ul-Thx" id="PoC-n2-Ayh"/>
                         <outlet property="favoritesControl" destination="PJb-na-GUf" id="sw4-qD-uaX"/>
                         <segue destination="eDR-rL-L6B" kind="show" identifier="event-detail" id="WY1-HA-Fxl"/>
                     </connections>
@@ -413,7 +414,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Contacts" id="5G0-Nf-4Op">
-                        <barButtonItem key="leftBarButtonItem" title="Done" id="n9s-tX-Rc7"/>
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="n9s-tX-Rc7">
+                            <connections>
+                                <action selector="done:" destination="GXB-fZ-Db9" id="cYJ-yP-4aF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulu-HB-TNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -621,6 +626,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="navbar-contact-by-phone" width="22" height="22"/>
         <image name="navbar-favorite" width="22" height="22"/>
         <image name="navbar-new-mentor-request" width="22" height="22"/>
         <image name="navbar-submit-mentor-request" width="22" height="22"/>
